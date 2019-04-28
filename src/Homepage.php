@@ -114,6 +114,9 @@
                                 <div align="center"> ชื่อผู้ใช้ </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
+                                <div align="center"> ชื่อเจ้าของสัตว์เลี้ยง </div>
+                            </th>
+                            <th style="padding-left: 5px; padding-right: 5px">
                                 <div align="center"> รูปภาพสัตว์เลี้ยง </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
@@ -156,6 +159,7 @@
                             <tr>
                                 <td align="center" style="width: 5%"><?php echo ($x) ?></td>
                                 <td align="center" style="width: 10%"><?php echo ($result["user"]) ?></td>
+                                <td align="center" style="width: 10%"><?php echo ($result["nameAnimal"]) ?></td>
                                 <td align="center" style="width: 8%">
                                     <img src="<?php echo ($result["picAnimal"]) ?>" width="80" height="80" style="margin: 3% 0px 3% 0px;" >
                                 </td>

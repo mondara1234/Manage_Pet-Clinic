@@ -11,7 +11,7 @@
                     </a>
                 </li>
                 <li class="sidebar-item font-14">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../../../src/Responsible/Members_Responsible.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../../../src/Treatment/Treatment.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
                         <i class="fa fa-user-md"></i>
                         <span class="hide-menu p-r-10"> แจ้งการรักษา </span>
                     </a>
@@ -75,7 +75,7 @@
                     </ul>
                 </li>
                 <li class="sidebar-item font-14">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../../../src/Responsible/Members_Responsible.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../../../src/Treatment/Treatment.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
                         <i class="fa fa-user-md"></i>
                         <span class="hide-menu p-r-10"> แจ้งการรักษา </span>
                     </a>
