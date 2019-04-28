@@ -10,7 +10,7 @@
     <meta name="author" content=""> <!-- ผู้เขียนหน้านี้ -->
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/logo.png">
-    <title>ฐานข้อมูล ประวัติการรักษา</title>
+    <title>การจัดการ ข้อมูลการรักษา</title>
 
     <!-- Custom CSS -->
     <link href="../assets/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -31,13 +31,15 @@
 
     include('../Database/connect.php');
 
-    $sql = "SELECT * FROM history WHERE user LIKE '%".$Search."%' ";
-    $query = mysqli_query($conn, $sql);
-
     $UserName = $_GET["UserName"];
     $sqlmanage = "SELECT * FROM admin WHERE user = '$UserName' ";
     $querymanage = mysqli_query($conn, $sqlmanage);
     $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
+
+    $NameClinic = $resultUser['name'];
+
+    $sql = "SELECT * FROM history WHERE user LIKE '%".$Search."%' AND nameVeterinary = '$NameClinic' OR nameuser LIKE '%".$Search."%' AND nameVeterinary = '$NameClinic' order by date ASC  ";
+    $query = mysqli_query($conn, $sql);
 
     $sqlAdminmanage = "SELECT COUNT(*) as totalAdminmanage FROM admin WHERE Permission = 'pending' ";
     $queryAdminmanage = mysqli_query($conn, $sqlAdminmanage);
@@ -59,7 +61,7 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">ฐานข้อมูล ประวัติการรักษา</h4>
+                        <h4 class="page-title">การจัดการ ข้อมูลการรักษา</h4>
                     </div>
                 </div>
             </div>
@@ -69,10 +71,10 @@
             <div class="container-fluid">
                 <center>
                     <form name="search" method="post">
-                        <table width="80%" border="0">
+                        <table width="80%" border="0" class="m-r-40">
                             <tr>
                                 <th>
-                                    <div align="center" class="font-16"> ชื่อผู้ใช้ :
+                                    <div align="center" class="font-16"> ชื่อเจ้าของสัตว์เลี้ยง หรือ ชื่อผู้ใช้ :
                                         <input name="txtSearch" type="text" id="txtSearch" value="<?php echo($Search); ?>" />
                                         <input type="submit" value="ค้นหา" />
                                     </div>
@@ -81,12 +83,6 @@
                         </table>
                     </form>
                 </center>
-                <button type="submit" name="Submit" class="font-16"
-                        style="width: 10%; height: 30px; color: white; background: #f5b57f; border-color: white; margin-top: 2%"
-                        onclick="window.location.href='api/insert.php?UserName=<?php echo($_GET["UserName"]); ?>'"
-                >
-                    เพิ่มข้อมูล
-                </button>
                 <table width="100%" border="1" style="margin-top: 20px; border: black;" class="font-14">
                     <tr bgcolor="#d6913a" style="color: white; height: 40px">
                         <th style="padding-left: 5px; padding-right: 5px">

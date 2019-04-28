@@ -26,6 +26,10 @@ $sqlmanage = "SELECT * FROM admin WHERE user = '$UserName' ";
 $querymanage = mysqli_query($conn, $sqlmanage);
 $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
 
+$sqlAdminmanage = "SELECT COUNT(*) as totalAdminmanage FROM admin WHERE Permission = 'pending' ";
+$queryAdminmanage = mysqli_query($conn, $sqlAdminmanage);
+$resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
+
 $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ'";
 $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
 $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);

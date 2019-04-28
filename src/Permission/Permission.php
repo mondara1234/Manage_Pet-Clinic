@@ -31,17 +31,17 @@
 
         include('../Database/connect.php');
 
-        $sql = "SELECT * FROM adminmanage WHERE UserName LIKE '%".$Search."%' ";
+        $sql = "SELECT * FROM admin WHERE user LIKE '%".$Search."%' ";
         $query = mysqli_query($conn, $sql);
 
         $UserName = $_GET["UserName"];
-        $sqlmanage = "SELECT * FROM adminmanage WHERE UserName = '$UserName' ";
+        $sqlmanage = "SELECT * FROM admin WHERE user = '$UserName' ";
         $querymanage = mysqli_query($conn, $sqlmanage);
         $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
 
-        $sqlProblemapp = "SELECT COUNT(*) as totalProblemapp FROM problemapp where Status != 'แก้ไขสร็จสิ้น' ";
-        $queryProblemapp = mysqli_query($conn, $sqlProblemapp);
-        $resultProblemapp = mysqli_fetch_array($queryProblemapp, MYSQLI_ASSOC);
+        $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ'";
+        $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
+        $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
 
         $sqlAdminmanage = "SELECT COUNT(*) as totalAdminmanage FROM adminmanage WHERE Permission = 'pending' ";
         $queryAdminmanage = mysqli_query($conn, $sqlAdminmanage);
@@ -88,9 +88,9 @@
                                     ?>
                                     <div class="cardID m-r-20 m-t-10 p-t-5" style="width: 17%;" >
                                         <center>
-                                            <img src="<?php echo ($result["ImgProfile"]) ?>" width="90%" height="130px" style="margin-top: 3%;">
+                                            <img src="<?php echo ($result["pic"]) ?>" width="90%" height="130px" style="margin-top: 3%;">
                                             <div class="containerID">
-                                                <font class="font-20"><b><?php echo ($result["UserName"]) ?></b></font>
+                                                <font class="font-20"><b><?php echo ($result["user"]) ?></b></font>
                                                 <div>
                                                     <font class="font-16">สถานะ :</font>
                                                     <font class="font-14">
@@ -106,14 +106,14 @@
                                                     </font>
                                                 </div>
                                                 <div class="row justify-content-between align-items-center m-b-5" >
-                                                    <form name="edit" action="api/updated.php?UserName=<?php echo($_GET["UserName"]); ?>" method="post" enctype="multipart/form-data" >
+                                                    <form name="edit" action="api/updated.php?UserName=<?php echo($_GET["user"]); ?>" method="post" enctype="multipart/form-data" >
                                                         <input type="hidden" name="UserID" value="<?php echo ($result["ID"]);?>"/>
                                                         <input type="hidden" name="Permission" value="allow" />
                                                         <button  class="font-12" style=" color: white; background: #068e81;">
                                                             อนุญาต
                                                         </button>
                                                     </form>
-                                                    <form name="edit" action="api/updated.php?UserName=<?php echo($_GET["UserName"]); ?>" method="post" enctype="multipart/form-data">
+                                                    <form name="edit" action="api/updated.php?UserName=<?php echo($_GET["user"]); ?>" method="post" enctype="multipart/form-data">
                                                         <input type="hidden" name="UserID" value="<?php echo ($result["ID"]);?>" />
                                                         <input type="hidden" name="Permission" value="disallow" />
                                                         <button  class="font-12" style=" color: white; background: #068e81;">

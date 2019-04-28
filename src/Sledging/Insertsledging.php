@@ -52,6 +52,13 @@ if(!$result){
                     </script>"
         );
     }
+    $iduser = $results['id'];
+    $sqls = "UPDATE member SET 
+			nameVeterinary = '$Responsible',
+			phoneVeterinary = '$phoneVeterinary'
+			
+			WHERE id = '$iduser' ";
+    $querys = mysqli_query($conn, $sqls);
 }
 
 mysqli_close($conn);

@@ -35,6 +35,10 @@
         $querymanage = mysqli_query($conn, $sqlmanage);
         $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
 
+        $sqlAdminmanage = "SELECT COUNT(*) as totalAdminmanage FROM admin WHERE Permission = 'pending' ";
+        $queryAdminmanage = mysqli_query($conn, $sqlAdminmanage);
+        $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
+
         $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ'";
         $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
         $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
@@ -42,10 +46,10 @@
         $usetname = $resultUser['name'];
         $status = $resultUser['Status'];
         if($status === 'superadmin'){
-            $sql = "SELECT * FROM postponement WHERE user LIKE '%".$Search."%' OR nameuser LIKE '%".$Search."%' order by old_date desc ";
+            $sql = "SELECT * FROM postponement WHERE user LIKE '%".$Search."%' AND status != 'อนุมัติ' OR nameuser LIKE '%".$Search."%' AND status != 'อนุมัติ' order by old_date desc ";
             $query = mysqli_query($conn, $sql);
         }else{
-            $sql = "SELECT * FROM postponement WHERE user LIKE '%".$Search."%' OR nameuser LIKE '%".$Search."%' AND Responsible = '$usetname' order by old_date desc ";
+            $sql = "SELECT * FROM postponement WHERE user LIKE '%".$Search."%' AND Responsible = '$usetname' AND status != 'อนุมัติ' OR nameuser LIKE '%".$Search."%' AND Responsible = '$usetname' AND status != 'อนุมัติ' order by old_date desc ";
             $query = mysqli_query($conn, $sql);
         }
          function OnSelectionChange() {
@@ -134,9 +138,9 @@
                                         <td align="center" style="width: 5%"><?php echo ($result["Responsible"] === '' ? 'ไม่มีผู้ดูแล' : $result["Responsible"]) ?></td>
                                         <td align="center" style="width: 7%"><?php echo ($result["title"]) ?></td>
                                         <td align="center" style="width: 7%"><?php echo ($result["date"]) ?></td>
-                                        <td align="center" style="width: 7%"><?php echo ($result["time"]) ?></td>
+                                        <td align="center" style="width: 6%"><?php echo ($result["time"]) ?></td>
                                         <td align="center" style="width: 7%"><?php echo ($result["old_date"]) ?></td>
-                                        <td align="center" style="width: 10%"><textarea rows="4"  style="margin-top: 2%; width: 100%; resize: none" readonly><?php echo ($result["detail"]) ?></textarea></textarea></td>
+                                        <td align="center" style="width: 15%"><textarea rows="4"  style="margin-top: 2%; width: 100%; resize: none" readonly><?php echo ($result["detail"]) ?></textarea></textarea></td>
                                         <td align="center" style="width: 9%">
                                             <select name="selectResponsible" id="selectResponsible<?php echo ($x) ?>"
                                                     style="width: 100%"
@@ -188,7 +192,7 @@
                 if (value == "รออนุมัติ") {
                     alert('กรุณาเลือกการอนุมัติ');
                     return;
-                } else {
+                }else {
                     if (confirm('คุณต้องการ'+value+' การเลื่อนนัดของ '+user+' ใช่ไหม ?') == true) {
                         if (window.XMLHttpRequest) {
                             // code for IE7+, Firefox, Chrome, Opera, Safari

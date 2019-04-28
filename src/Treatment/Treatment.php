@@ -26,6 +26,10 @@ $sqlmanage = "SELECT * FROM admin WHERE user = '$UserName' ";
 $querymanage = mysqli_query($conn, $sqlmanage);
 $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
 
+$sqlAdminmanage = "SELECT COUNT(*) as totalAdminmanage FROM admin WHERE Permission = 'pending' ";
+$queryAdminmanage = mysqli_query($conn, $sqlAdminmanage);
+$resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
+
 $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ'";
 $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
 $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
@@ -59,12 +63,12 @@ $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC)
                             <td width="80%"><input type="text" name="pUserName" style="width: 100%" required/></td>
                         </tr>
                         <tr>
-                            <td width="20%" align="right"><b style="margin-right: 2%;"> สัตวแพทย์ที่ดูแล :</b></td>
-                            <td width="80%"><input type="text" name="nameVeterinary" style="width: 100%" required/></td>
+                            <td width="20%" align="right"><b style="margin-right: 2%;"> สัตวแพทย์ที่รับผิดชอบ :</b></td>
+                            <td width="80%"><input type="text" name="nameVeterinary" style="width: 100%" value="<?php echo($resultUser['name'])?>" readonly/></td>
                         </tr>
                         <tr>
                             <td width="20%" align="right"><b style="margin-right: 2%;"> เบอร์โทรศัพท์สัตวแพทย์ :</b></td>
-                            <td width="80%"><input type="number" name="phoneVeterinary" style="width: 100%" required/></td>
+                            <td width="80%"><input type="number" name="phoneVeterinary" style="width: 100%" value="<?php echo($resultUser['phone'])?>" readonly/></td>
                         </tr>
                         <tr>
                             <td width="20%" align="right"><b style="margin-right: 2%;"> หัวข้อการรักษา :</b></td>

@@ -18,6 +18,7 @@ include("../Database/connect.php");
     $Sql_Querys = "select * from member where nameuser = '$UserName'";
     $querys = mysqli_query($conn, $Sql_Querys);
     $results = mysqli_fetch_array($querys, MYSQLI_ASSOC);
+
     if(!$result){
             $message = "ไม่มีสัตวแพทย์คนนี้อยู่ในระบบ";
             echo (
@@ -54,7 +55,16 @@ include("../Database/connect.php");
                     </script>"
                 );
             }
+
+        $iduser = $results['id'];
+        $sqls = "UPDATE member SET 
+                nameVeterinary = '$nameVeterinary',
+                phoneVeterinary = '$phoneVeterinary'
+                
+                WHERE id = '$iduser' ";
+        $querys = mysqli_query($conn, $sqls);
         }
+
 
 	mysqli_close($conn);
 ?>

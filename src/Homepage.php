@@ -24,6 +24,10 @@
     $query = mysqli_query($conn, $sql);
     $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
 
+    $sqlAdminmanage = "SELECT COUNT(*) as totalAdminmanage FROM admin WHERE Permission = 'pending' ";
+    $queryAdminmanage = mysqli_query($conn, $sqlAdminmanage);
+    $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
+
     $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ'";
     $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
     $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
@@ -34,8 +38,15 @@
         $Search = $_POST["txtSearch"];
     }
 
-    $sqls = "SELECT * FROM member WHERE user LIKE '%".$Search."%' OR nameuser LIKE '%".$Search."%'";
-    $querys = mysqli_query($conn, $sqls);
+    $usetname = $result['name'];
+    $status = $result['Status'];
+    if($status === 'superadmin'){
+        $sql = "SELECT * FROM member WHERE user LIKE '%".$Search."%' OR nameuser LIKE '%".$Search."%' order by DateRegis ASC ";
+        $querys = mysqli_query($conn, $sql);
+    }else{
+        $sql = "SELECT * FROM member WHERE user LIKE '%".$Search."%' AND nameVeterinary = '$usetname' OR nameuser LIKE '%".$Search."%' AND nameVeterinary = '$usetname' order by DateRegis ASC ";
+        $querys = mysqli_query($conn, $sql);
+    }
 
     ?>
     <body class="bg-container">
@@ -61,7 +72,7 @@
                 <div class="container-fluid">
                     <center>
                         <div class="row" style="justify-content: center; align-content: center">
-                            <div class="quick-actions_homepage  m-b-10">
+                            <div class="quick-actions_homepage">
                                 <ul class="quick-actions">
                                     <li class="bg_lb" style="width: 18%; margin-left: 10%">
                                         <a href="Homepage.php?UserName=<?php echo($_GET["UserName"]); ?>">
@@ -92,7 +103,7 @@
                             </div>
                         </div>
                         <form name="search" method="post">
-                            <table width="80%" border="0">
+                            <table width="80%" border="0" class="m-t-15 m-b-15">
                                 <tr>
                                     <th>
                                         <div align="center" class="font-16"> ชื่อเจ้าของสัตว์เลี้ยง หรือ ชื่อผู้ใช้ :

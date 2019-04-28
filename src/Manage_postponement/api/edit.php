@@ -34,9 +34,13 @@
         $query = mysqli_query($conn, $sql);
         $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
 
-    $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ'";
-    $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
-    $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
+        $sqlAdminmanage = "SELECT COUNT(*) as totalAdminmanage FROM admin WHERE Permission = 'pending' ";
+        $queryAdminmanage = mysqli_query($conn, $sqlAdminmanage);
+        $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
+
+        $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ'";
+        $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
+        $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
     ?>
     <!-- ============================================================== -->
     <!-- ส่วนหัว - ใช้ style จาก pages.scss -->

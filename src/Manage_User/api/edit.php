@@ -35,6 +35,10 @@
         $querymanage = mysqli_query($conn, $sqlmanage);
         $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
 
+        $sqlAdminmanage = "SELECT COUNT(*) as totalAdminmanage FROM admin WHERE Permission = 'pending' ";
+        $queryAdminmanage = mysqli_query($conn, $sqlAdminmanage);
+        $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
+
         $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ'";
         $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
         $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
@@ -112,6 +116,14 @@
                                     <input type="file" name="pImgProfile" id="pImgProfile" />
                                     <input type="hidden" name="ImgProfile" value="<?php echo $result["picAnimal"]; ?>">
                                 </td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="right"><b style="margin-right: 2%;"> สัตวแพทย์ที่รับผิดชอบ :</b></td>
+                                <td width="70%"><input type="text" name="nameVeterinary" value="<?php echo $result["nameVeterinary"]; ?>" style="width: 100%" required/></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="right"><b style="margin-right: 2%;"> เบอร์โทรศัพท์สัตวแพทย์ :</b></td>
+                                <td width="70%"><input type="number" name="phoneVeterinary" value="<?php echo $result["phoneVeterinary"]; ?>" style="width: 100%" required/></td>
                             </tr>
                         </table>
                         <button type="submit" name="Submit" class="font-18"

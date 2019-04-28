@@ -39,6 +39,10 @@
     $querymanage = mysqli_query($conn, $sqlmanage);
     $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
 
+    $sqlAdminmanage = "SELECT COUNT(*) as totalAdminmanage FROM admin WHERE Permission = 'pending' ";
+    $queryAdminmanage = mysqli_query($conn, $sqlAdminmanage);
+    $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
+
     $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ'";
     $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
     $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
@@ -122,6 +126,9 @@
                             <div align="center"> สัตวแพทย์ที่รับผิดชอบ </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
+                            <div align="center"> เบอร์โทรศัพท์สัตวแพทย์ </div>
+                        </th>
+                        <th style="padding-left: 5px; padding-right: 5px">
                             <div align="center"> วันที่สมัคร </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
@@ -147,7 +154,7 @@
                         ?>
                         <tr>
                             <td align="center" style="width: 4%"><?php echo ($x) ?></td>
-                            <td align="center" style="width: 7%"><?php echo ($result["user"]) ?></td>
+                            <td align="center" style="width: 5.5%"><?php echo ($result["user"]) ?></td>
                             <td align="center" style="width: 10%"><?php echo ($result["email"]) ?></td>
                             <td align="center" style="width: 7%"><?php echo ($result["password"]) ?></td>
                             <td align="center" style="width: 9%"><?php echo ($result["nameuser"]) ?></td>
@@ -159,7 +166,8 @@
                             <td align="center" style="width: 5%"><?php echo ($result["sexAnimal"]) ?></td>
                             <td align="center" style="width: 10%"><?php echo ($result["birthAnimal"]) ?></td>
                             <td align="center" style="width: 7%"><?php echo ($result["breedAnimal"]) ?></td>
-                            <td align="center" style="width: 9%"><?php echo ($resultResponsible["Responsible"]) ?></td>
+                            <td align="center" style="width: 9%"><?php echo ($result["nameVeterinary"]) ?></td>
+                            <td align="center" style="width: 8%"><?php echo ($result["phoneVeterinary"]) ?></td>
                             <td align="center" style="width: 10%"><?php echo ($result["DateRegis"]) ?></td>
                             <td align="center" style="width: 3%">
                                 <a href="api/edit.php?UserID=<?php echo ($result["id"]);?>&UserName=<?php echo($_GET["UserName"]); ?>"> Edit </a>

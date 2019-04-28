@@ -11,6 +11,8 @@
     $psexAnimal = $_POST["sexAnimal"];
     $pbreedAnimal = $_POST["breedAnimal"];
     $pbirthAnimal = $_POST["birthAnimal"];
+    $nameVeterinary = $_POST["nameVeterinary"];
+    $phoneVeterinary = $_POST["phoneVeterinary"];
 
     $old_img = $_POST["ImgProfile"];
     $pImgProfile;
@@ -48,6 +50,8 @@ if($result){
                 sexAnimal = '$psexAnimal', 
                 birthAnimal = '$pbirthAnimal', 
                 breedAnimal = '$pbreedAnimal',
+                nameVeterinary = '$nameVeterinary', 
+                phoneVeterinary = '$phoneVeterinary',
                 picAnimal = '$pImgProfile'
                 
                 WHERE id = $UserID ";
@@ -87,6 +91,8 @@ if($result){
                 sexAnimal = '$psexAnimal', 
                 birthAnimal = '$pbirthAnimal', 
                 breedAnimal = '$pbreedAnimal',
+                nameVeterinary = '$nameVeterinary', 
+                phoneVeterinary = '$phoneVeterinary',
                 picAnimal = '$pImgProfile'
                 
                 WHERE id = $UserID ";

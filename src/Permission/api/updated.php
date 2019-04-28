@@ -5,10 +5,10 @@
 	$Permission = $_POST["Permission"];
 	$UserName = $_GET["UserName"];
 
-	$sql = "UPDATE adminmanage SET 
+	$sql = "UPDATE admin SET 
 			Permission = '$Permission'
 			
-			WHERE ID = $UserID ";
+			WHERE id = $UserID ";
 	$query = mysqli_query($conn, $sql);
 	$PrimissionTh = '';
 

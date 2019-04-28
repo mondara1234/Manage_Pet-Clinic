@@ -11,6 +11,26 @@
                     </a>
                 </li>
                 <li class="sidebar-item font-14">
+                    <a class="sidebar-link has-arrow waves-effect" href="javascript:void(0)" aria-expanded="false">
+                        <i class="mdi mdi-pencil"></i>
+                        <span class="hide-menu"> การจัดการข้อมูล </span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse first-level">
+                        <li class="sidebar-item font-14">
+                            <a href="../EditClinic_history/Managehistory.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link">
+                                <i class="mdi mdi-book-open-page-variant"></i>
+                                <span class="hide-menu"> การจัดการ ข้อมูลการรักษา </span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item font-14">
+                            <a href="../EditClinic_sledging/Managesledging.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link">
+                                <i class="mdi mdi-engine-outline"></i>
+                                <span class="hide-menu"> การจัดการ ข้อมูลการนัดพบ</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item font-14">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../../src/Treatment/Treatment.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
                         <i class="fa fa-user-md"></i>
                         <span class="hide-menu p-r-10"> แจ้งการรักษา </span>
@@ -91,6 +111,13 @@
                         <i class="mdi mdi-alert"></i>
                         <span class="hide-menu p-r-10"> การขอเลื่อนนัด </span>
                         <span class="label label-danger"><?php echo($resultAllPostponement['totalAllPostponement']); ?></span>
+                    </a>
+                </li>
+                <li class="sidebar-item font-14">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../../src/Permission/Permission.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
+                        <i class="mdi mdi-key"></i>
+                        <span class="hide-menu p-r-10"> การขออนุญาต </span>
+                        <span class="label label-danger"><?php echo($resultAdminmanage['totalAdminmanage']); ?></span>
                     </a>
                 </li>
             <?php endif; ?>
