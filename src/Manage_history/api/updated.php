@@ -4,6 +4,7 @@
     $old_UserName = $_POST["old_UserName"];
     $UserName = $_POST["pUserName"];
 	$AdminID = $_POST["AdminID"];
+    $nameuser = $_POST["nameuser"];
 	$nameVeterinary = $_POST["nameVeterinary"];
 	$phoneVeterinary = $_POST["phoneVeterinary"];
     $title = $_POST["title"];
@@ -23,6 +24,7 @@ if($result){
     if($result["user"] === $old_UserName){
         $sql = "UPDATE history SET 
                         user = '$UserName',
+                        nameuser = '$nameuser',
                         nameVeterinary = '$nameVeterinary',
                         phoneVeterinary = '$phoneVeterinary',
                         title = '$title',
@@ -61,6 +63,7 @@ if($result){
 }else {
     $sql = "UPDATE history SET 
                 user = '$UserName',
+                nameuser = '$nameuser',
                 nameVeterinary = '$nameVeterinary',
                 phoneVeterinary = '$phoneVeterinary',
                 title = '$title',

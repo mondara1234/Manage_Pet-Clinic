@@ -8,11 +8,10 @@
         <meta name="author" content=""> <!-- ผู้เขียนหน้านี้ -->
         <!-- Favicon icon -->
         <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo.png">
-        <title>Admin - Healthy Tracker</title>
+        <title>Admin - Pet-Clinic</title>
 
         <!-- Custom CSS -->
         <link href="assets/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="assets/libs/flot/css/float-chart.css" rel="stylesheet">
         <link href="assets/dist/css/icons/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
         <link href="assets/dist/css/matrix-style.css" rel="stylesheet">
         <link href="assets/dist/css/style.min.css" rel="stylesheet">
@@ -35,7 +34,7 @@
         $Search = $_POST["txtSearch"];
     }
 
-    $sqls = "SELECT * FROM member WHERE user LIKE '%".$Search."%' ";
+    $sqls = "SELECT * FROM member WHERE user LIKE '%".$Search."%' OR nameuser LIKE '%".$Search."%'";
     $querys = mysqli_query($conn, $sqls);
 
     ?>
@@ -71,20 +70,21 @@
                                         </a>
                                     </li>
                                     <li class="bg_ls" style="width: 18%;">
-                                        <a href="ProfileUser/UserInformation.php?UserName=<?php echo($_GET["UserName"]); ?>">
+                                        <a href="Treatment/Treatment.php?UserName=<?php echo($_GET["UserName"]); ?>">
                                             <h1 class="font-light text-white"><i class="fa fa-user-circle"></i></h1>
                                             <div style="margin-top: 10%">แจ้งการรักษา</div>
                                         </a>
                                     </li>
                                     <li class="bg_lo" style="width: 18%">
-                                        <a href="Manage_User/ManageMembers.php?UserName=<?php echo($_GET["UserName"]); ?>">
+                                        <a href="Sledging/Sledging.php?UserName=<?php echo($_GET["UserName"]); ?>">
                                             <h1 class="font-light text-white"><i class="mdi mdi-receipt"></i></h1>
                                             <div>แจ้งการนัดพบ</div>
                                         </a>
                                     </li>
                                     <li class="bg_lg" style="width: 18%">
-                                        <a href="Statistics_App/UserStatisticsApp.php?UserName=<?php echo($_GET["UserName"]); ?>">
-                                            <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
+                                        <a href="postponement/Show_Postponement.php?UserName=<?php echo($_GET["UserName"]); ?>">
+                                            <h1 class="font-light text-white"><i class="mdi mdi-alert"></i></h1>
+                                            <span class="label label-danger"><?php echo($resultAllPostponement['totalAllPostponement']); ?></span>
                                             <div>การขอเลื่อนนัด</div>
                                         </a>
                                     </li>
@@ -95,7 +95,7 @@
                             <table width="80%" border="0">
                                 <tr>
                                     <th>
-                                        <div align="center" class="font-16"> ชื่อผู้ใช้ :
+                                        <div align="center" class="font-16"> ชื่อเจ้าของสัตว์เลี้ยง หรือ ชื่อผู้ใช้ :
                                             <input name="txtSearch" type="text" id="txtSearch" value="<?php echo($Search); ?>" />
                                             <input type="submit" value="ค้นหา" />
                                         </div>
@@ -115,6 +115,9 @@
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
                                 <div align="center"> ชื่อเจ้าของสัตว์เลี้ยง </div>
+                            </th>
+                            <th style="padding-left: 5px; padding-right: 5px">
+                                <div align="center"> เบอร์โทรศัพท์เจ้าของสัตว์เลี้ยง </div>
                             </th>
                             <th style="padding-left: 5px; padding-right: 5px">
                                 <div align="center"> รูปภาพสัตว์เลี้ยง </div>
@@ -159,14 +162,15 @@
                             <tr>
                                 <td align="center" style="width: 5%"><?php echo ($x) ?></td>
                                 <td align="center" style="width: 10%"><?php echo ($result["user"]) ?></td>
-                                <td align="center" style="width: 10%"><?php echo ($result["nameAnimal"]) ?></td>
+                                <td align="center" style="width: 15%"><?php echo ($result["nameuser"]) ?></td>
+                                <td align="center" style="width: 10%"><?php echo ($result["phone"]) ?></td>
                                 <td align="center" style="width: 8%">
                                     <img src="<?php echo ($result["picAnimal"]) ?>" width="80" height="80" style="margin: 3% 0px 3% 0px;" >
                                 </td>
                                 <td align="center" style="width: 10%"><?php echo ($result["nameAnimal"]) ?></td>
                                 <td align="center" style="width: 10%"><?php echo ($result["sexAnimal"]) ?></td>
                                 <td align="center" style="width: 10%"><?php echo ($result["birthAnimal"]) ?></td>
-                                <td align="center" style="width: 12%"><?php echo ($result["breedAnimal"]) ?></td>
+                                <td align="center" style="width: 7%"><?php echo ($result["breedAnimal"]) ?></td>
                                 <td align="center" style="width: 15%"><?php echo ($resultResponsible["Responsible"]) ?></td>
                                 <td align="center" style="width: 10%"><?php echo ($resultResponsible["phoneVeterinary"]) ?></td>
                             </tr>

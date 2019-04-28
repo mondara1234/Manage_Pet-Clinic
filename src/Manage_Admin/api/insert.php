@@ -55,28 +55,28 @@ $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC)
                     <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
                     <table width="70%" border="1" style="border: #d6913a double 5px;">
                         <tr>
-                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ชื่อผู้ใช้ :</b></td>
+                            <td width="20%" align="right"><b style="margin-right: 2%;"> ชื่อผู้ใช้ :</b></td>
                             <td width="80%"><input type="text" name="txtUsername" style="width: 100%" required/></td>
                         </tr>
                         <tr>
-                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> อีเมล :</b></td>
+                            <td width="20%" align="right"><b style="margin-right: 2%;"> อีเมล :</b></td>
                             <td width="80%"><input type="email" name="txtEmail" style="width: 100%" required/></td>
                         </tr>
                         <tr>
-                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> รหัสผ่าน :</b></td>
+                            <td width="20%" align="right"><b style="margin-right: 2%;"> รหัสผ่าน :</b></td>
                             <td width="80%"><input type="password" name="txtPassword" style="width: 100%" required/></td>
                         </tr>
                         <tr>
-                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ชื่อ - นามสกุล :</b></td>
+                            <td width="20%" align="right"><b style="margin-right: 2%;"> ชื่อ - นามสกุล :</b></td>
                             <td width="80%"><input type="text" name="txtFirst_name" style="width: 100%" required/></td>
                         </tr>
                         <tr>
-                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> เบอร์โทรศัพท์ :</b></td>
+                            <td width="20%" align="right"><b style="margin-right: 2%;"> เบอร์โทรศัพท์ :</b></td>
                             <td width="80%"><input type="number" name="txtTelephone"  style="width: 100%" required/></td>
                             <input type="hidden" name="date" id="date" value="<?php echo date('Y-m-d');?>"/>
                         </tr>
                         <tr>
-                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> การอนุญาติใช้งาน :</b></td>
+                            <td width="20%" align="right"><b style="margin-right: 2%;"> การอนุญาติใช้งาน :</b></td>
                             <td width="80%">
                                 <select name="Permission" id="Permission">
                                     <option value="allow" selected>อนุญาต</option>
@@ -86,7 +86,7 @@ $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC)
                         </tr>
                         <tr>
                             <input type="hidden" name="date" id="date" value="<?php echo date('Y-m-d');?>"/>
-                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> รูปโปรไฟล์ :</b></td>
+                            <td width="20%" align="right"><b style="margin-right: 2%;"> รูปโปรไฟล์ :</b></td>
                             <td width="80%">
                                 <input type="file" name="pImgProfile" id="pImgProfile"/>
                             </td>

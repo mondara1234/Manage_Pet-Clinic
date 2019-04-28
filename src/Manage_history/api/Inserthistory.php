@@ -2,6 +2,7 @@
 <?php
 include("../../Database/connect.php");
     $UserName = $_POST["pUserName"];
+    $nameuser = $_POST["nameuser"];
     $nameVeterinary = $_POST["nameVeterinary"];
     $phoneVeterinary = $_POST["phoneVeterinary"];
     $title = $_POST["title"];
@@ -15,9 +16,10 @@ include("../../Database/connect.php");
     $query = mysqli_query($conn, $Sql_Query);
     $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
 
-    $Sql_Querys = "select * from member where user = '$UserName'";
+    $Sql_Querys = "select * from member where user = '$UserName' AND nameuser = '$nameuser'";
     $querys = mysqli_query($conn, $Sql_Querys);
     $results = mysqli_fetch_array($querys, MYSQLI_ASSOC);
+
     if(!$result){
             $message = "ไม่มีสัตวแพทย์คนนี้อยู่ในระบบ";
             echo (
@@ -26,15 +28,15 @@ include("../../Database/connect.php");
                 </script>"
             );
     }elseif(!$results){
-        $message = "ไม่มีผู้ใช้คนนี้อยู่ในระบบ";
+        $message = "ชื่อผู้ใช้ หรือ ชื่อเจ้าของสัตว์เลี้ยง ไม่ถูกต้อง หรือไม่ตรงกัน";
             echo (
             "<script LANGUAGE='JavaScript'>
                     window.alert('$message');
                 </script>"
             );
     }else {
-        $sql = "INSERT INTO history (user, nameVeterinary, phoneVeterinary, title, date, time, symptom, detail, price) 
-			VALUES ('$UserName', '$nameVeterinary', '$phoneVeterinary', '$title', '$date', '$time', '$symptom', '$detail', '$price')";
+        $sql = "INSERT INTO history (user, nameVeterinary, phoneVeterinary, title, date, time, symptom, detail, price, nameuser) 
+			VALUES ('$UserName', '$nameVeterinary', '$phoneVeterinary', '$title', '$date', '$time', '$symptom', '$detail', '$price','$nameuser')";
 
             $query = mysqli_query($conn, $sql);
 

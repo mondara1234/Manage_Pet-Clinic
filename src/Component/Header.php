@@ -17,13 +17,13 @@
                     </a>
                 </li>
                 <li class="sidebar-item font-14">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../../src/Statistics_App/UserStatisticsApp.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../../src/Sledging/Sledging.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
                         <i class="mdi mdi-chart-bar"></i>
                         <span class="hide-menu p-r-10"> แจ้งการนัดพบ </span>
                     </a>
                 </li>
                 <li class="sidebar-item font-14">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../../src/Problems/Problems.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../../src/postponement/Show_Postponement.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
                         <i class="mdi mdi-alert"></i>
                         <span class="hide-menu p-r-10"> การขอเลื่อนนัด </span>
                         <span class="label label-danger"><?php echo($resultAllPostponement['totalAllPostponement']); ?></span>
@@ -81,13 +81,13 @@
                     </a>
                 </li>
                 <li class="sidebar-item font-14">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../../src/Statistics_App/UserStatisticsApp.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../../src/Sledging/Sledging.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
                         <i class="mdi mdi-chart-bar"></i>
                         <span class="hide-menu p-r-10"> แจ้งการนัดพบ </span>
                     </a>
                 </li>
                 <li class="sidebar-item font-14">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../../src/Problems/Problems.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../../src/postponement/Show_Postponement.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
                         <i class="mdi mdi-alert"></i>
                         <span class="hide-menu p-r-10"> การขอเลื่อนนัด </span>
                         <span class="label label-danger"><?php echo($resultAllPostponement['totalAllPostponement']); ?></span>

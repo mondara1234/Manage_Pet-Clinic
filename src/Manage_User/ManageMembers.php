@@ -31,7 +31,7 @@
 
     include('../Database/connect.php');
 
-    $sql = "SELECT * FROM member WHERE user LIKE '%".$Search."%' ";
+    $sql = "SELECT * FROM member WHERE user LIKE '%".$Search."%' OR nameuser LIKE '%".$Search."%'";
     $query = mysqli_query($conn, $sql);
 
     $UserName = $_GET["UserName"];
@@ -68,7 +68,7 @@
                         <table width="80%" border="0">
                             <tr>
                                 <th>
-                                    <div align="center" class="font-16"> ชื่อผู้ใช้ :
+                                    <div align="center" class="font-16"> ชื่อเจ้าของสัตว์เลี้ยง หรือ ชื่อผู้ใช้ :
                                         <input name="txtSearch" type="text" id="txtSearch" value="<?php echo($Search); ?>" />
                                         <input type="submit" value="ค้นหา" />
                                     </div>
@@ -96,6 +96,12 @@
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
                             <div align="center"> รหัสผ่าน </div>
+                        </th>
+                        <th style="padding-left: 5px; padding-right: 5px">
+                            <div align="center"> ชื่อเจ้าของสัตว์เลี้ยง </div>
+                        </th>
+                        <th style="padding-left: 5px; padding-right: 5px">
+                            <div align="center"> เบอร์โทรศัพท์เจ้าของสัตว์เลี้ยง </div>
                         </th>
                         <th style="padding-left: 5px; padding-right: 5px">
                             <div align="center"> รูปภาพสัตว์เลี้ยง </div>
@@ -140,23 +146,25 @@
                         $resultResponsible = mysqli_fetch_array($queryResponsible, MYSQLI_ASSOC);
                         ?>
                         <tr>
-                            <td align="center" style="width: 5%"><?php echo ($x) ?></td>
-                            <td align="center" style="width: 10%"><?php echo ($result["user"]) ?></td>
+                            <td align="center" style="width: 4%"><?php echo ($x) ?></td>
+                            <td align="center" style="width: 7%"><?php echo ($result["user"]) ?></td>
                             <td align="center" style="width: 10%"><?php echo ($result["email"]) ?></td>
-                            <td align="center" style="width: 10%"><?php echo ($result["password"]) ?></td>
-                            <td align="center" style="width: 8.5%">
-                                <img src="<?php echo ($result["picAnimal"]) ?>" width="80" height="80" style="margin: 3% 0px 3% 0px;" >
+                            <td align="center" style="width: 7%"><?php echo ($result["password"]) ?></td>
+                            <td align="center" style="width: 9%"><?php echo ($result["nameuser"]) ?></td>
+                            <td align="center" style="width: 8%"><?php echo ($result["phone"]) ?></td>
+                            <td align="center" style="width: 8%">
+                                <img src="<?php echo ($result["picAnimal"]) ?>" width="80" height="80" style="margin: 1% 0px 3% 0px;" >
                             </td>
-                            <td align="center" style="width: 10%"><?php echo ($result["nameAnimal"]) ?></td>
-                            <td align="center" style="width: 7%"><?php echo ($result["sexAnimal"]) ?></td>
+                            <td align="center" style="width: 8%"><?php echo ($result["nameAnimal"]) ?></td>
+                            <td align="center" style="width: 5%"><?php echo ($result["sexAnimal"]) ?></td>
                             <td align="center" style="width: 10%"><?php echo ($result["birthAnimal"]) ?></td>
-                            <td align="center" style="width: 8%"><?php echo ($result["breedAnimal"]) ?></td>
+                            <td align="center" style="width: 7%"><?php echo ($result["breedAnimal"]) ?></td>
                             <td align="center" style="width: 9%"><?php echo ($resultResponsible["Responsible"]) ?></td>
                             <td align="center" style="width: 10%"><?php echo ($result["DateRegis"]) ?></td>
-                            <td align="center">
+                            <td align="center" style="width: 3%">
                                 <a href="api/edit.php?UserID=<?php echo ($result["id"]);?>&UserName=<?php echo($_GET["UserName"]); ?>"> Edit </a>
                             </td>
-                            <td align="center">
+                            <td align="center" style="width: 5%">
                                 <a href="JavaScript:if(confirm('Confirm Delete?')==true)
                 {window.location='api/delete.php?UserID=<?php echo ($result["id"]);?>&UserName=<?php echo($_GET["UserName"]); ?>';}"> Delete </a>
                             </td>

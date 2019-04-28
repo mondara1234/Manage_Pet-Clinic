@@ -3,6 +3,7 @@
 include("../../Database/connect.php");
 $old_UserName = $_POST["old_UserName"];
 $UserName = $_POST["pUserName"];
+$nameuser = $_POST["nameuser"];
 $PostID = $_POST["PostID"];
 $nameVeterinary = $_POST["nameVeterinary"];
 $old_date= $_POST["old_date"];
@@ -24,6 +25,7 @@ if($result){
         $sql = "UPDATE postponement SET 
                 user = '$UserName',
                 Responsible = '$nameVeterinary',
+                nameuser = '$nameuser',
                 title = '$title',
                 date = '$date',
                 time = '$time',
@@ -61,6 +63,7 @@ if($result){
     $sql = "UPDATE postponement SET 
                 user = '$UserName',
                 Responsible = '$nameVeterinary',
+                nameuser = '$nameuser',
                 title = '$title',
                 date = '$date',
                 time = '$time',

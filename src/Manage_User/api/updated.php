@@ -5,6 +5,8 @@
 	$UserID = $_POST["UserID"];
 	$pEmail = $_POST["pEmail"];
 	$pPassword = $_POST["pPassword"];
+    $nameuser = $_POST["nameuser"];
+    $phoneuser = $_POST["phoneuser"];
 	$pnameAnimal = $_POST["nameAnimal"];
     $psexAnimal = $_POST["sexAnimal"];
     $pbreedAnimal = $_POST["breedAnimal"];
@@ -40,6 +42,8 @@ if($result){
         $sql = "UPDATE member SET 
                 email = '$pEmail',
                 password = '$pPassword',
+                nameuser = '$nameuser', 
+                phone = '$phoneuser',
                 nameAnimal= '$pnameAnimal', 
                 sexAnimal = '$psexAnimal', 
                 birthAnimal = '$pbirthAnimal', 
@@ -77,6 +81,8 @@ if($result){
     $sql = "UPDATE member SET 
                 email = '$pEmail',
                 password = '$pPassword',
+                nameuser = '$nameuser', 
+                phone = '$phoneuser',
                 nameAnimal= '$pnameAnimal', 
                 sexAnimal = '$psexAnimal', 
                 birthAnimal = '$pbirthAnimal', 

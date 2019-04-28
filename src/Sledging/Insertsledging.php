@@ -2,21 +2,17 @@
 <?php
 include("../../Database/connect.php");
 $UserName = $_POST["pUserName"];
-$nameVeterinary = $_POST["nameVeterinary"];
-$old_date= $_POST["old_date"];
-$nameuser = $_POST["nameuser"];
 $title = $_POST["title"];
 $date = $_POST["date"];
 $time = $_POST["time"];
-$symptom = $_POST["symptom"];
-$detail = $_POST["detail"];
-$status = $_POST["status"];
+$Responsible = $_POST["Responsible"];
+$phoneVeterinary = $_POST["phoneVeterinary"];
 
-$Sql_Query = "select * from admin where name = '$nameVeterinary'";
+$Sql_Query = "select * from admin where name = '$Responsible'";
 $query = mysqli_query($conn, $Sql_Query);
 $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
 
-$Sql_Querys = "select * from member where user = '$UserName' AND nameuser = '$nameuser'";
+$Sql_Querys = "select * from member where user = '$UserName'";
 $querys = mysqli_query($conn, $Sql_Querys);
 $results = mysqli_fetch_array($querys, MYSQLI_ASSOC);
 
@@ -28,15 +24,15 @@ if(!$result){
                 </script>"
     );
 }elseif(!$results){
-    $message = "ชื่อผู้ใช้ หรือ ชื่อเจ้าของสัตว์เลี้ยง ไม่ถูกต้อง หรือไม่ตรงกัน";
+    $message = "ไม่มีผู้ใช้คนนี้อยู่ในระบบ";
     echo (
     "<script LANGUAGE='JavaScript'>
                     window.alert('$message');
                 </script>"
     );
 }else {
-    $sql = "INSERT INTO postponement (user, Responsible, title, date, time, old_date, detail, status, nameuser) 
-			VALUES ('$UserName', '$nameVeterinary', '$title', '$date', '$time', '$old_date', '$detail', '$status', '$nameuser')";
+    $sql = "INSERT INTO sledging (user, title, date, time, Responsible, phoneVeterinary) 
+			VALUES ('$UserName','$title', '$date', '$time', '$Responsible', '$phoneVeterinary')";
 
     $query = mysqli_query($conn, $sql);
 
@@ -56,6 +52,6 @@ if(!$result){
         );
     }
 }
-	
-	mysqli_close($conn);
+
+mysqli_close($conn);
 ?>

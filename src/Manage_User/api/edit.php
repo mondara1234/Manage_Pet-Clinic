@@ -62,28 +62,36 @@
                 <center>
                     <form name="edit" action="updated.php" method="post" enctype="multipart/form-data" target="iframe_target">
                         <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
-                        <table width="70%" border="1" style="border: #d6913a double 5px;">
+                        <table width="80%" border="1" style="border: #d6913a double 5px;">
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ชื่อผู้ใช้งาน :</b></td>
-                                <td width="80%"><input type="text" name="pUsername" value="<?php echo $result["user"]; ?>" style="width: 100%" readonly/></td>
+                                <td width="30%" align="right"><b style="margin-right: 2%;"> ชื่อผู้ใช้งาน :</b></td>
+                                <td width="70%"><input type="text" name="pUsername" value="<?php echo $result["user"]; ?>" style="width: 100%" readonly/></td>
                                 <input type="hidden" name="old_Username" value="<?php echo $result["user"]; ?>" style="width: 100%" />
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> อีเมล :</b></td>
-                                <td width="80%"><input type="email" name="pEmail" value="<?php echo $result["email"]; ?>" style="width: 100%" required/></td>
+                                <td width="30%" align="right"><b style="margin-right: 2%;"> อีเมล :</b></td>
+                                <td width="70%"><input type="email" name="pEmail" value="<?php echo $result["email"]; ?>" style="width: 100%" required/></td>
                                 <input type="hidden" name="UserID" value="<?php echo $result["id"]; ?>" />
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> รหัสผ่าน :</b></td>
-                                <td width="80%"><input type="password" name="pPassword" value="<?php echo $result["password"]; ?>" style="width: 100%" required/></td>
+                                <td width="30%" align="right"><b style="margin-right: 2%;"> รหัสผ่าน :</b></td>
+                                <td width="70%"><input type="password" name="pPassword" value="<?php echo $result["password"]; ?>" style="width: 100%" required/></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ชื่อสัตว์เลี้ยง :</b></td>
-                                <td width="80%"><input type="text" name="nameAnimal" value="<?php echo $result["nameAnimal"]; ?>" style="width: 100%" required/></td>
+                                <td width="30%" align="right"><b style="margin-right: 2%;"> ชื่อเจ้าของสัตว์เลี้ยง :</b></td>
+                                <td width="70%"><input type="text" name="nameuser" value="<?php echo $result["nameuser"]; ?>" style="width: 100%" required/></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> เพสสัตว์เลี้ยง :</b></td>
-                                <td width="80%">
+                                <td width="30%" align="right"><b style="margin-right: 2%;"> เบอร์โทรศัพท์เจ้าของสัตว์เลี้ยง :</b></td>
+                                <td width="70%"><input type="number" name="phoneuser" value="<?php echo $result["phone"]; ?>" style="width: 100%" required/></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="right"><b style="margin-right: 2%;"> ชื่อสัตว์เลี้ยง :</b></td>
+                                <td width="70%"><input type="text" name="nameAnimal" value="<?php echo $result["nameAnimal"]; ?>" style="width: 100%" required/></td>
+                            </tr>
+                            <tr>
+                                <td width="30%" align="right"><b style="margin-right: 2%;"> เพสสัตว์เลี้ยง :</b></td>
+                                <td width="70%">
                                     <select name="sexAnimal" id="sexAnimal">
                                         <option value="ตัวผู้" <?php if($result["sexAnimal"]=="ตัวผู้") echo 'selected="selected"'; ?>>ตัวผู้</option>
                                         <option value="ตัวเมีย" <?php if($result["sexAnimal"]=="ตัวเมีย") echo 'selected="selected"'; ?>>ตัวเมีย</option>
@@ -91,23 +99,23 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> สายพันธุ์สัตว์เลี้ยง :</b></td>
-                                <td width="80%"><input type="text" name="breedAnimal" value="<?php echo $result["breedAnimal"]; ?>" style="width: 100%" required/></td>
+                                <td width="30%" align="right"><b style="margin-right: 2%;"> สายพันธุ์สัตว์เลี้ยง :</b></td>
+                                <td width="70%"><input type="text" name="breedAnimal" value="<?php echo $result["breedAnimal"]; ?>" style="width: 100%" required/></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> วันเกิดสัตว์เลี้ยง :</b></td>
-                                <td width="80%"><input type="date" name="birthAnimal" value="<?php echo $result["birthAnimal"]; ?>" style="width: 100%" required/></td>
+                                <td width="30%" align="right"><b style="margin-right: 2%;"> วันเกิดสัตว์เลี้ยง :</b></td>
+                                <td width="70%"><input type="date" name="birthAnimal" value="<?php echo $result["birthAnimal"]; ?>" style="width: 100%" required/></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> รูปภาพสัตว์เลี้ยง :</b></td>
-                                <td width="80%">
+                                <td width="30%" align="right"><b style="margin-right: 2%;"> รูปภาพสัตว์เลี้ยง :</b></td>
+                                <td width="70%">
                                     <input type="file" name="pImgProfile" id="pImgProfile" />
                                     <input type="hidden" name="ImgProfile" value="<?php echo $result["picAnimal"]; ?>">
                                 </td>
                             </tr>
                         </table>
                         <button type="submit" name="Submit" class="font-18"
-                                style="width: 20%; height: 40px; color: white; background: #f5b57f; border-color: white; margin-top: 2%"
+                                style="width: 30%; height: 40px; color: white; background: #f5b57f; border-color: white; margin-top: 2%"
                         >
                             บันทึกการเปลี่ยนแปลง
                         </button>

@@ -63,31 +63,35 @@
                         <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
                         <table width="90%" border="1" style="border: #d6913a double 5px;">
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ชื่อผู้ใช้ :</b></td>
+                                <td width="20%" align="right"><b style="margin-right: 2%;"> ชื่อผู้ใช้ :</b></td>
                                 <td width="80%"><input type="text" name="pUserName" value="<?php echo $result["user"]; ?>" style="width: 100%" readonly/></td>
                                 <input type="hidden" name="AdminID" value="<?php echo $result["id"]; ?>"/>
                                 <input type="hidden" name="old_UserName" value="<?php echo $result["user"]; ?>"/>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> สัตวแพทย์ที่ดูแล :</b></td>
+                                <td width="20%" align="right"><b style="margin-right: 2%;"> ชื่อเจ้าของสัตว์เลี้ยง :</b></td>
+                                <td width="80%"><input type="text" name="nameuser" value="<?php echo $result["nameuser"]; ?>" style="width: 100%" required/></td>
+                            </tr>
+                            <tr>
+                                <td width="20%" align="right"><b style="margin-right: 2%;"> สัตวแพทย์ที่ดูแล :</b></td>
                                 <td width="80%"><input type="text" name="nameVeterinary" value="<?php echo $result["nameVeterinary"]; ?>" style="width: 100%" required/></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> เบอร์โทรศัพท์สัตวแพทย์ :</b></td>
+                                <td width="20%" align="right"><b style="margin-right: 2%;"> เบอร์โทรศัพท์สัตวแพทย์ :</b></td>
                                 <td width="80%"><input type="number" name="phoneVeterinary" value="<?php echo $result["phoneVeterinary"]; ?>" style="width: 100%" required/></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> หัวข้อ :</b></td>
+                                <td width="20%" align="right"><b style="margin-right: 2%;"> หัวข้อ :</b></td>
                                 <td width="80%"><input type="text" name="title" value="<?php echo $result["title"]; ?>" style="width: 100%" required/></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> วันที่ :</b></td>
+                                <td width="20%" align="right"><b style="margin-right: 2%;"> วันที่ :</b></td>
                                 <td width="80%">
                                     <input type="date" name="date" id="date" value="<?php echo $result["date"]; ?>" style="width: 100%" required/>
                                     </td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> เวลา :</b></td>
+                                <td width="20%" align="right"><b style="margin-right: 2%;"> เวลา :</b></td>
                                 <td width="80%">
                                     <input type="time" name="time" id="time" step="2" style="width: 100%" value="<?php echo $result["time"]; ?>" required />
                                 </td>
@@ -105,7 +109,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ราคา :</b></td>
+                                <td width="20%" align="right"><b style="margin-right: 2%;"> ราคา :</b></td>
                                 <td width="80%">
                                     <input type="number" name="price" value="<?php echo $result["price"]; ?>" required />
                                 </td>

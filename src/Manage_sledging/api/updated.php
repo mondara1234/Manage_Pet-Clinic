@@ -4,6 +4,7 @@
     $old_UserName = $_POST["old_UserName"];
     $UserName = $_POST["pUserName"];
 	$UserID = $_POST["UserID"];
+    $nameuser = $_POST["nameuser"];
 	$title = $_POST["title"];
 	$date = $_POST["date"];
     $time = $_POST["time"];
@@ -20,6 +21,7 @@ if($result){
     if($result["user"] === $old_UserName){
         $sql = "UPDATE sledging SET 
                         user = '$UserName',
+                        nameuser = '$nameuser',
                         title = '$title',
                         date = '$date',
                         time = '$time',
@@ -55,6 +57,7 @@ if($result){
 }else {
     $sql = "UPDATE sledging SET 
                         user = '$UserName',
+                        nameuser = '$nameuser',
                         title = '$title',
                         date = '$date',
                         time = '$time',

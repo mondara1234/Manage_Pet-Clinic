@@ -55,15 +55,15 @@ $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC)
                     <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
                     <table width="70%" border="1" style="border: #d6913a double 5px;">
                         <tr>
-                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ชื่อผู้ใช้ :</b></td>
+                            <td width="20%" align="right"><b style="margin-right: 2%;"> ชื่อผู้ใช้ :</b></td>
                             <td width="80%"><input type="text" name="pUsername"style="width: 100%" required /></td>
                         </tr>
                         <tr>
-                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> อีเมล :</b></td>
+                            <td width="20%" align="right"><b style="margin-right: 2%;"> อีเมล :</b></td>
                             <td width="80%"><input type="email" name="pEmail" style="width: 100%" required/></td>
                         </tr>
                         <tr>
-                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> รหัสผ่าน :</b></td>
+                            <td width="20%" align="right"><b style="margin-right: 2%;"> รหัสผ่าน :</b></td>
                             <td width="80%"><input type="password" name="pPassword"  style="width: 100%" required/></td>
                         </tr>
                         <input type="hidden" name="date" id="date" value="<?php echo date('Y-m-d');?>"/>

@@ -63,29 +63,29 @@
                         <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
                         <table width="70%" border="1" style="border: #d6913a double 5px;">
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ชื่อผู้ใช้ :</b></td>
+                                <td width="20%" align="right"><b style="margin-right: 2%;"> ชื่อผู้ใช้ :</b></td>
                                 <td width="80%"><input type="text" name="pUserName" value="<?php echo $result["user"]; ?>" style="width: 100%" readonly/></td>
                                 <input type="hidden" name="AdminID" value="<?php echo $result["id"]; ?>"/>
                                 <input type="hidden" name="old_UserName" value="<?php echo $result["user"]; ?>"/>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> อีเมล :</b></td>
+                                <td width="20%" align="right"><b style="margin-right: 2%;"> อีเมล :</b></td>
                                 <td width="80%"><input type="email" name="pEmail" value="<?php echo $result["email"]; ?>" style="width: 100%" required/></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> รหัสผ่าน :</b></td>
+                                <td width="20%" align="right"><b style="margin-right: 2%;"> รหัสผ่าน :</b></td>
                                 <td width="80%"><input type="password" name="pPassword" value="<?php echo $result["password"]; ?>" style="width: 100%" required/></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ชื่อ - นามสกุล :</b></td>
+                                <td width="20%" align="right"><b style="margin-right: 2%;"> ชื่อ - นามสกุล :</b></td>
                                 <td width="80%"><input type="text" name="pFirstName" value="<?php echo $result["name"]; ?>" style="width: 100%" required/></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> เบอร์โทรศัพท์ :</b></td>
+                                <td width="20%" align="right"><b style="margin-right: 2%;"> เบอร์โทรศัพท์ :</b></td>
                                 <td width="80%"><input type="number" name="pTelephone" id="pTelephone" value="<?php echo $result["phone"]; ?>" style="width: 100%" required/></td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> สถานนะผู้ใช้ :</b></td>
+                                <td width="20%" align="right"><b style="margin-right: 2%;"> สถานนะผู้ใช้ :</b></td>
                                 <td width="80%">
                                     <select name="pStatus" id="pStatus">
                                         <option value="admin" <?php if($result["Status"]=="admin") echo 'selected="selected"'; ?>>สัตวแพทย์</option>
@@ -94,7 +94,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> การอนุญาติใช้งาน :</b></td>
+                                <td width="20%" align="right"><b style="margin-right: 2%;"> การอนุญาติใช้งาน :</b></td>
                                 <td width="80%">
                                     <select name="Permission" id="Permission">
                                         <option value="allow" <?php if($result["Permission"]=="allow") echo 'selected="selected"'; ?>>อนุญาต</option>
@@ -103,13 +103,13 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> วันที่สมัคร :</b></td>
+                                <td width="20%" align="right"><b style="margin-right: 2%;"> วันที่สมัคร :</b></td>
                                 <td width="80%">
                                     <input type="date" name="pDateRegis" value="<?php echo $result["DateRegis"]; ?>" readonly />
                                 </td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> รูปโปรไฟล์ :</b></td>
+                                <td width="20%" align="right"><b style="margin-right: 2%;"> รูปโปรไฟล์ :</b></td>
                                 <td width="80%">
                                     <input type="file" name="pImgProfile" id="pImgProfile"/>
                                     <input type="hidden" name="ImgProfile" value="<?php echo $resultUser["pic"]; ?>">
