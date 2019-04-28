@@ -42,10 +42,10 @@
         $usetname = $resultUser['name'];
         $status = $resultUser['Status'];
         if($status === 'superadmin'){
-            $sql = "SELECT * FROM postponement WHERE user LIKE '%".$Search."%' ";
+            $sql = "SELECT * FROM postponement WHERE user LIKE '%".$Search."%' OR nameuser LIKE '%".$Search."%' order by old_date desc ";
             $query = mysqli_query($conn, $sql);
         }else{
-            $sql = "SELECT * FROM postponement WHERE user LIKE '%".$Search."%' Responsible AND = '$usetname' ";
+            $sql = "SELECT * FROM postponement WHERE user LIKE '%".$Search."%' OR nameuser LIKE '%".$Search."%' AND Responsible = '$usetname' order by old_date desc ";
             $query = mysqli_query($conn, $sql);
         }
          function OnSelectionChange() {
@@ -76,7 +76,7 @@
                             <form name="search" method="post">
                                 <table width="80%" border="0">
                                     <tr>
-                                        <th> <div align="center" class="font-16"> ชื่อผู้ใช้งาน :
+                                        <th> <div align="center" class="font-16"> ชื่อเจ้าของสัตว์เลี้ยง หรือ ชื่อผู้ใช้ :
                                                 <input name="txtSearch" type="text" id="txtSearch" value="<?php echo($Search); ?>" />
                                                 <input type="submit" value="ค้นหา" />
                                             </div>
@@ -91,6 +91,9 @@
                                 </th>
                                 <th style="padding-left: 5px; padding-right: 5px">
                                     <div align="center"> ชื่อผู้ใช้ </div>
+                                </th>
+                                <th style="padding-left: 5px; padding-right: 5px">
+                                    <div align="center"> ชื่อเจ้าของสัตว์เลี้ยง </div>
                                 </th>
                                 <th style="padding-left: 5px; padding-right: 5px">
                                     <div align="center"> ชื่อสัตวแพทย์ที่ดูแล </div>
@@ -127,6 +130,7 @@
                                     <tr>
                                         <td align="center" style="width: 5%"><?php echo ($x) ?></td>
                                         <td align="center" style="width: 7%"><?php echo ($result["user"]) ?></td>
+                                        <td align="center" style="width: 7%"><?php echo ($result["nameuser"]) ?></td>
                                         <td align="center" style="width: 5%"><?php echo ($result["Responsible"] === '' ? 'ไม่มีผู้ดูแล' : $result["Responsible"]) ?></td>
                                         <td align="center" style="width: 7%"><?php echo ($result["title"]) ?></td>
                                         <td align="center" style="width: 7%"><?php echo ($result["date"]) ?></td>
@@ -134,8 +138,17 @@
                                         <td align="center" style="width: 7%"><?php echo ($result["old_date"]) ?></td>
                                         <td align="center" style="width: 10%"><textarea rows="4"  style="margin-top: 2%; width: 100%; resize: none" readonly><?php echo ($result["detail"]) ?></textarea></textarea></td>
                                         <td align="center" style="width: 9%">
-                                            <select name="selectResponsible" id="selectResponsible<?php echo ($x) ?>"  style="width: 100%" onchange="showUser(this.value,'<?php echo ($result["id"]);?>')">
-                                                <option value="select">เลือกการอนุมัติ</option>
+                                            <select name="selectResponsible" id="selectResponsible<?php echo ($x) ?>"
+                                                    style="width: 100%"
+                                                    onchange="showUser(
+                                                        this.value,
+                                                            '<?php echo ($result["id"]);?>',
+                                                            '<?php echo ($result["nameuser"]);?>',
+                                                            '<?php echo ($result["old_date"]);?>',
+                                                            '<?php echo ($result["date"]);?>',
+                                                            '<?php echo ($result["time"]);?>'
+                                                            )">
+                                                <option value="รออนุมัติ" <?php if($result["status"]=="รออนุมัติ") echo 'selected="selected"'; ?>>รออนุมัติ</option>
                                                 <option value="อนุมัติ" <?php if($result["status"]=="อนุมัติ") echo 'selected="selected"'; ?>>อนุมัติ</option>
                                                 <option value="ไม่อนุมัติ" <?php if($result["status"]=="ไม่อนุมัติ") echo 'selected="selected"'; ?>>ไม่อนุมัติ</option>
                                             </select>
@@ -170,12 +183,13 @@
         <!-- กำหนดเอง Scripts -->
         <script src="../assets/dist/js/custom.min.js"></script>
         <script>
-            function showUser(value, user) {
-                if (value == "select") {
-                    alert('กรุณาเลือกผู้ดูแล');
+            function showUser(value, id, user, old_date, date, time) {
+
+                if (value == "รออนุมัติ") {
+                    alert('กรุณาเลือกการอนุมัติ');
                     return;
                 } else {
-                    if (confirm('คุณต้องการให้'+value+'ดูแลใช่ไหม ?') == true) {
+                    if (confirm('คุณต้องการ'+value+' การเลื่อนนัดของ '+user+' ใช่ไหม ?') == true) {
                         if (window.XMLHttpRequest) {
                             // code for IE7+, Firefox, Chrome, Opera, Safari
                             xmlhttp = new XMLHttpRequest();
@@ -183,7 +197,7 @@
                             // code for IE6, IE5
                             xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
                         }
-                            xmlhttp.open("GET", "api/Update.php?UserName=" + value + '&' + "UserID=" + user);
+                            xmlhttp.open("GET", "api/Update.php?value=" + value + "&old_date=" + old_date + "&UserName=" + user + "&date=" + date + "&time=" + time + "&id=" + id, true);
                             xmlhttp.send();
                         window.location.reload();
                     }

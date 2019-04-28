@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <?php
-include("../../Database/connect.php");
+include("../Database/connect.php");
 $UserName = $_POST["pUserName"];
 $title = $_POST["title"];
 $date = $_POST["date"];
@@ -12,7 +12,7 @@ $Sql_Query = "select * from admin where name = '$Responsible'";
 $query = mysqli_query($conn, $Sql_Query);
 $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
 
-$Sql_Querys = "select * from member where user = '$UserName'";
+$Sql_Querys = "select * from member where nameuser = '$UserName'";
 $querys = mysqli_query($conn, $Sql_Querys);
 $results = mysqli_fetch_array($querys, MYSQLI_ASSOC);
 
@@ -24,15 +24,16 @@ if(!$result){
                 </script>"
     );
 }elseif(!$results){
-    $message = "ไม่มีผู้ใช้คนนี้อยู่ในระบบ";
+    $message = "ไม่มีชื่อเจ้าของสัตว์เลี้ยงนี้อยู่ในระบบ";
     echo (
     "<script LANGUAGE='JavaScript'>
                     window.alert('$message');
                 </script>"
     );
 }else {
-    $sql = "INSERT INTO sledging (user, title, date, time, Responsible, phoneVeterinary) 
-			VALUES ('$UserName','$title', '$date', '$time', '$Responsible', '$phoneVeterinary')";
+    $user = $results['user'];
+    $sql = "INSERT INTO sledging (user, title, date, time, Responsible, phoneVeterinary, nameuser) 
+			VALUES ('$user','$title', '$date', '$time', '$Responsible', '$phoneVeterinary', '$UserName')";
 
     $query = mysqli_query($conn, $sql);
 

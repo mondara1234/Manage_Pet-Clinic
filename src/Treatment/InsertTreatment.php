@@ -34,8 +34,8 @@ include("../Database/connect.php");
             );
     }else {
         $user = $results['user'];
-        $sql = "INSERT INTO history (user, nameVeterinary, phoneVeterinary, title, date, time, symptom, detail, price) 
-			VALUES ('$user', '$nameVeterinary', '$phoneVeterinary', '$title', '$date', '$time', '$symptom', '$detail', '$price')";
+        $sql = "INSERT INTO history (user, nameVeterinary, phoneVeterinary, title, date, time, symptom, detail, price, nameuser) 
+			VALUES ('$user', '$nameVeterinary', '$phoneVeterinary', '$title', '$date', '$time', '$symptom', '$detail', '$price', '$UserName')";
 
             $query = mysqli_query($conn, $sql);
 

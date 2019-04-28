@@ -15,7 +15,7 @@
     <link href="../assets/dist/css/icons/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
     <link href="../assets/dist/css/style.min.css" rel="stylesheet">
     <link href="../assets/dist/css/styleCommon.css" rel="stylesheet">
-    <title> การเพิ่มข้อมูล การนัดพบ </title>
+    <title> การแจ้งการนัดพบ </title>
 </head>
 <body class="bg-container">
 <?php
@@ -42,7 +42,7 @@ $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC)
         <div class="page-breadcrumb">
             <div class="row">
                 <div class="col-12 d-flex no-block align-items-center">
-                    <h4 class="page-title">การเพิ่มข้อมูล การนัดพบ</h4>
+                    <h4 class="page-title">การแจ้งการนัดพบ</h4>
                 </div>
             </div>
         </div>
@@ -55,7 +55,7 @@ $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC)
                     <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
                     <table width="90%" border="1" style="border: #d6913a double 5px;">
                         <tr>
-                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ชื่อผู้ใช้ :</b></td>
+                            <td width="20%" align="right" valign="top"><b style="margin-right: 2%;"> ชื่อเจ้าของสัตว์เลี้ยง :</b></td>
                             <td width="80%"><input type="text" name="pUserName"style="width: 100%" required/></td>
                         </tr>
                         <tr>
