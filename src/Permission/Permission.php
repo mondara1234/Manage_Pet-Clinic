@@ -43,7 +43,7 @@
         $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
         $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
 
-        $sqlAdminmanage = "SELECT COUNT(*) as totalAdminmanage FROM adminmanage WHERE Permission = 'pending' ";
+        $sqlAdminmanage = "SELECT COUNT(*) as totalAdminmanage FROM admin WHERE Permission = 'pending' ";
         $queryAdminmanage = mysqli_query($conn, $sqlAdminmanage);
         $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
     ?>

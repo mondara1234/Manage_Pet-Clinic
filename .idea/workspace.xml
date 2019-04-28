@@ -2,44 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bdd1bc3-2df5-45eb-a379-6a7795650da3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/EditClinic_history/Managehistory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EditClinic_history/api/delete.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EditClinic_history/api/edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EditClinic_history/api/updated.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EditClinic_sledging/Managesledging.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EditClinic_sledging/api/delete.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EditClinic_sledging/api/edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/EditClinic_sledging/api/updated.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Header.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/HeaderEdit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/HeaderEdit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/HeaderHome.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/HeaderHome.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/EditProfile/edit_Profile.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/EditProfile/edit_Profile.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Homepage.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homepage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Admin/ManageAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Admin/ManageAdmin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Admin/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Admin/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_Admin/api/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_Admin/api/insert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_User/ManageMembers.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_User/ManageMembers.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_User/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_User/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_User/api/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_User/api/insert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_User/api/updated.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_User/api/updated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_history/Managehistory.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_history/Managehistory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_history/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_history/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_history/api/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_history/api/insert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_postponement/Managepostponement.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_postponement/Managepostponement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_postponement/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_postponement/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_postponement/api/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_postponement/api/insert.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_sledging/Managesledging.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_sledging/Managesledging.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_sledging/api/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_sledging/api/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Manage_sledging/api/insert.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manage_sledging/api/insert.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Permission/Permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Permission/Permission.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Permission/api/updated.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Permission/api/updated.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sledging/Insertsledging.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sledging/Insertsledging.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Sledging/Sledging.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sledging/Sledging.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Treatment/InsertTreatment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Treatment/InsertTreatment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Treatment/Treatment.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Treatment/Treatment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/postponement/Show_Postponement.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/postponement/Show_Postponement.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,14 +17,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Treatment.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Treatment/Treatment.php">
+      <file leaf-file-name="HeaderHome.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Component/HeaderHome.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="58" column="133" selection-start-line="58" selection-start-column="133" selection-end-line="58" selection-end-column="133" />
+            <state relative-caret-position="289">
+              <caret line="107" column="21" lean-forward="true" selection-start-line="107" selection-start-column="21" selection-end-line="107" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HeaderEdit.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Component/HeaderEdit.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="43">
+              <caret line="83" column="55" selection-start-line="83" selection-start-column="55" selection-end-line="83" selection-end-column="55" />
               <folding>
-                <element signature="n#style#0;n#iframe#0;n#form#0;n#center#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#a#0;n#li#2;n#ul#0;n#li#6;n#ul#0;n#nav#0;n#aside#0;n#!!top" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Component/Header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="110" column="57" selection-start-line="110" selection-start-column="57" selection-end-line="110" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -75,7 +60,7 @@
       <find>Responsible/Members_Responsible.php</find>
       <find>20%</find>
       <find>80%</find>
-      <find>valign=&quot;top&quot;</find>
+      <find />
     </findStrings>
     <dirStrings>
       <dir>E:\xampp\htdocs\Manage_Pet-Clinic</dir>
@@ -131,13 +116,13 @@
         <option value="$PROJECT_DIR$/src/Manage_Admin/api/insert.php" />
         <option value="$PROJECT_DIR$/src/EditProfile/edit_Profile.php" />
         <option value="$PROJECT_DIR$/src/Permission/api/updated.php" />
-        <option value="$PROJECT_DIR$/src/Permission/Permission.php" />
-        <option value="$PROJECT_DIR$/src/Component/Header.php" />
-        <option value="$PROJECT_DIR$/src/Component/HeaderHome.php" />
-        <option value="$PROJECT_DIR$/src/Component/HeaderEdit.php" />
         <option value="$PROJECT_DIR$/src/EditClinic_history/Managehistory.php" />
         <option value="$PROJECT_DIR$/src/EditClinic_sledging/Managesledging.php" />
         <option value="$PROJECT_DIR$/src/Treatment/Treatment.php" />
+        <option value="$PROJECT_DIR$/src/Permission/Permission.php" />
+        <option value="$PROJECT_DIR$/src/Component/Header.php" />
+        <option value="$PROJECT_DIR$/src/Component/HeaderEdit.php" />
+        <option value="$PROJECT_DIR$/src/Component/HeaderHome.php" />
       </list>
     </option>
   </component>
@@ -158,7 +143,7 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1456" />
@@ -185,7 +170,7 @@
               <item name="Manage_Pet-Clinic" type="b2602c69:ProjectViewProjectNode" />
               <item name="Manage_Pet-Clinic" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Treatment" type="462c0819:PsiDirectoryNode" />
+              <item name="Component" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -236,12 +221,12 @@
       <option name="presentableId" value="Default" />
       <updated>1556367455646</updated>
       <workItem from="1556367456828" duration="21594000" />
-      <workItem from="1556434576528" duration="17673000" />
+      <workItem from="1556434576528" duration="19898000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39267000" />
+    <option name="totallyTimeSpent" value="41492000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -572,48 +557,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Permission/Permission.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="115" column="125" selection-start-line="115" selection-start-column="125" selection-end-line="115" selection-end-column="125" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/EditClinic_sledging/api/edit.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Homepage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="43" column="101" lean-forward="true" selection-start-line="43" selection-start-column="101" selection-end-line="43" selection-end-column="124" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/EditClinic_history/api/edit.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="14" column="65" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Component/HeaderEdit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="73" selection-start-line="27" selection-start-column="73" selection-end-line="27" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Component/HeaderHome.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="73" selection-start-line="27" selection-start-column="73" selection-end-line="27" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Component/Header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -633,11 +583,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Treatment/Treatment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
+        <state relative-caret-position="608">
           <caret line="58" column="133" selection-start-line="58" selection-start-column="133" selection-end-line="58" selection-end-column="133" />
           <folding>
             <element signature="n#style#0;n#iframe#0;n#form#0;n#center#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Permission/Permission.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="47" column="81" lean-forward="true" selection-start-line="47" selection-start-column="81" selection-end-line="47" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Homepage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="43" column="101" lean-forward="true" selection-start-line="43" selection-start-column="101" selection-end-line="43" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Component/Header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="110" column="57" selection-start-line="110" selection-start-column="57" selection-end-line="110" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Component/HeaderEdit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="83" column="55" selection-start-line="83" selection-start-column="55" selection-end-line="83" selection-end-column="55" />
+          <folding>
+            <element signature="n#a#0;n#li#2;n#ul#0;n#li#6;n#ul#0;n#nav#0;n#aside#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Component/HeaderHome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="107" column="21" lean-forward="true" selection-start-line="107" selection-start-column="21" selection-end-line="107" selection-end-column="21" />
         </state>
       </provider>
     </entry>

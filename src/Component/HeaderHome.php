@@ -24,7 +24,7 @@
                         </li>
                         <li class="sidebar-item font-14">
                             <a href="EditClinic_sledging/Managesledging.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link">
-                                <i class="mdi mdi-engine-outline"></i>
+                                <i class="mdi mdi-calendar"></i>
                                 <span class="hide-menu"> การจัดการ ข้อมูลการนัดพบ</span>
                             </a>
                         </li>
@@ -32,19 +32,19 @@
                 </li>
                 <li class="sidebar-item font-14">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/Treatment/Treatment.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
-                        <i class="fa fa-user-md"></i>
+                        <i class="mdi mdi-ambulance"></i>
                         <span class="hide-menu p-r-10"> แจ้งการรักษา </span>
                     </a>
                 </li>
                 <li class="sidebar-item font-14">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/Sledging/Sledging.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
-                        <i class="mdi mdi-chart-bar"></i>
+                        <i class="mdi mdi-calendar-clock"></i>
                         <span class="hide-menu p-r-10"> แจ้งการนัดพบ </span>
                     </a>
                 </li>
                 <li class="sidebar-item font-14">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/postponement/Show_Postponement.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
-                        <i class="mdi mdi-alert"></i>
+                        <i class="mdi mdi-calendar-remove"></i>
                         <span class="hide-menu p-r-10"> การขอเลื่อนนัด </span>
                         <span class="label label-danger"><?php echo($resultAllPostponement['totalAllPostponement']); ?></span>
                     </a>
@@ -76,19 +76,19 @@
                         </li>
                         <li class="sidebar-item font-14">
                             <a href="Manage_sledging/Managesledging.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link">
-                                <i class="mdi mdi-engine-outline"></i>
+                                <i class="mdi mdi-calendar"></i>
                                 <span class="hide-menu"> ฐานข้อมูล การนัดพบ</span>
                             </a>
                         </li>
                         <li class="sidebar-item font-14">
                             <a href="Manage_postponement/Managepostponement.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link">
-                                <i class="mdi mdi-food"></i>
+                                <i class="mdi mdi-calendar-remove"></i>
                                 <span class="hide-menu"> ฐานข้อมูล การขอเลื่อนนัด </span>
                             </a>
                         </li>
                         <li class="sidebar-item font-14">
                             <a href="Manage_Admin/ManageAdmin.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link">
-                                <i class="mdi mdi-run-fast"></i>
+                                <i class="mdi mdi-account-edit"></i>
                                 <span class="hide-menu"> ฐานข้อมูล ผู้ดูแลระบบ </span>
                             </a>
                         </li>
@@ -96,25 +96,25 @@
                 </li>
                 <li class="sidebar-item font-14">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/Treatment/Treatment.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
-                        <i class="fa fa-user-md"></i>
+                        <i class="mdi mdi-ambulance"></i>
                         <span class="hide-menu p-r-10"> แจ้งการรักษา </span>
                     </a>
                 </li>
                 <li class="sidebar-item font-14">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/Sledging/Sledging.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
-                        <i class="mdi mdi-chart-bar"></i>
+                        <i class="mdi mdi-calendar-clock"></i>
                         <span class="hide-menu p-r-10"> แจ้งการนัดพบ </span>
                     </a>
                 </li>
                 <li class="sidebar-item font-14">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/postponement/Show_Postponement.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
-                        <i class="mdi mdi-alert"></i>
+                        <i class="mdi mdi-calendar-remove"></i>
                         <span class="hide-menu p-r-10"> การขอเลื่อนนัด </span>
                         <span class="label label-danger"><?php echo($resultAllPostponement['totalAllPostponement']); ?></span>
                     </a>
                 </li>
                 <li class="sidebar-item font-14">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../../src/Permission/Permission.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/Permission/Permission.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
                         <i class="mdi mdi-key"></i>
                         <span class="hide-menu p-r-10"> การขออนุญาต </span>
                         <span class="label label-danger"><?php echo($resultAdminmanage['totalAdminmanage']); ?></span>
