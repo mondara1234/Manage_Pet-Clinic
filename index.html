@@ -1,0 +1,65 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--  ให้รองรับและ แสดงหน้าตา ใน IE=edge ได้โดยไม่ผิดเพี้ยน-->
+	<!-- กำหนดขนาด initial-scale=1.0 = เพื่อไม่ให้  Safari Zoom -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">  <!--  device-width = “ขนาด” ของ device นั้นๆ-->
+	<meta name="description" content="">  <!--  บอกรายละเอียดของเว็บเพจแบบคร่าวๆ-->
+	<meta name="author" content=""> <!-- ผู้เขียนหน้านี้ -->
+	<!-- Favicon icon -->
+	<link rel="icon" type="image/png" sizes="16x16" href="./src/assets/images/logo.png">
+	<title> เข้าสู่ระบบ </title>
+	<!-- Custom CSS -->
+	<link href="./src/assets/libs/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="./src/assets/dist/css/icons/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
+	<link href="./src/assets/dist/css/style.min.css" rel="stylesheet">
+	<link href="./src/assets/dist/css/styleCommon.css" rel="stylesheet">
+</head>
+
+<body style="background-image: url('./src/assets/images/background/bg_web.png'); background-size: 100% 100%;">
+	<form name="login" method="post" action="./src/Database/Check_login.php">
+		<p style="margin-left: 30%; margin-top: 2%">
+			<font  size="20" color="white">เข้าสู่ระบบ</font>
+		</p>
+		<div
+			 class="row justify-content-between"
+			 style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%"
+		>
+			<div style="margin-right: 15%;">
+				<div style="margin-top: 5%; margin-left: -40%">
+					<font Face="Monotype Corsiva" size="40" color="black">Manage</font>
+				</div>
+				<div style="margin-top: -27%; margin-left: 42%">
+					<font Face="Monotype Corsiva" size="40" color="black">Pet</font>
+				</div>
+				<div style="margin-top: -27%; margin-left: 62%" class="hex">
+					<font Face="Monotype Corsiva" size="40" color="#d6913a">Clinic</font>
+				</div>
+			</div>
+			<div>
+				<table cellpadding="20">
+					<tr>
+						<td align="right" class="font-18" style="color: black">Username :</td>
+						<td align="right" height="80"> <input name="txtUsername" type="text" id="txtUsername" style="height: 40px" required> </td>
+					</tr>
+					<tr>
+						<td align="right" class="font-18" style="color: black;">Password :</td>
+						<td align="right"> <input name="txtPassword" type="password" id="txtPassword" style="height: 40px" required> </td>
+					</tr>
+				</table>
+				<div style="margin-left: 40%; margin-top: 5%">
+					<button type="submit" name="Submit" class="font-18"
+							style="width: 60%; height: 40px; color: white; background: #f5b57f; border-color: white"
+					>
+						Login
+					</button>
+				</div>
+				<div style="margin-left: 10%; margin-top: 5%">
+					<label class="font-16" style="color: black">คุณมีบัญชีหรือยัง ? </label>
+					<a href="./src/register.php" class="font-18" style="margin-left: 5%; color: white">สมัครสมาชิก</a>
+				</div>
+			</div>
+		</div>
+	</form>
+</body>
+</html>
