@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8bdd1bc3-2df5-45eb-a379-6a7795650da3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Header.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/HeaderEdit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/HeaderEdit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/HeaderHome.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/HeaderHome.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Permission/Permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Permission/Permission.php" afterDir="false" />
-    </list>
+    <list default="true" id="8bdd1bc3-2df5-45eb-a379-6a7795650da3" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +54,7 @@
       <find>Responsible/Members_Responsible.php</find>
       <find>20%</find>
       <find>80%</find>
-      <find />
+      <find>valign=&quot;top&quot;</find>
     </findStrings>
     <dirStrings>
       <dir>E:\xampp\htdocs\Manage_Pet-Clinic</dir>
@@ -143,7 +137,7 @@
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1456" />
@@ -221,16 +215,15 @@
       <option name="presentableId" value="Default" />
       <updated>1556367455646</updated>
       <workItem from="1556367456828" duration="21594000" />
-      <workItem from="1556434576528" duration="19898000" />
+      <workItem from="1556434576528" duration="20419000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41492000" />
+    <option name="totallyTimeSpent" value="42013000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
