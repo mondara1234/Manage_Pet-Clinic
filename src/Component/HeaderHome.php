@@ -89,22 +89,10 @@
                         <li class="sidebar-item font-14">
                             <a href="Manage_Admin/ManageAdmin.php?UserName=<?php echo($_GET["UserName"]); ?>" class="sidebar-link">
                                 <i class="mdi mdi-account-edit"></i>
-                                <span class="hide-menu"> ฐานข้อมูล ผู้ดูแลระบบ </span>
+                                <span class="hide-menu"> ฐานข้อมูล สัตวแพทย์ </span>
                             </a>
                         </li>
                     </ul>
-                </li>
-                <li class="sidebar-item font-14">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/Treatment/Treatment.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
-                        <i class="mdi mdi-ambulance"></i>
-                        <span class="hide-menu p-r-10"> แจ้งการรักษา </span>
-                    </a>
-                </li>
-                <li class="sidebar-item font-14">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/Sledging/Sledging.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
-                        <i class="mdi mdi-calendar-clock"></i>
-                        <span class="hide-menu p-r-10"> แจ้งการนัดพบ </span>
-                    </a>
                 </li>
                 <li class="sidebar-item font-14">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../src/postponement/Show_Postponement.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">

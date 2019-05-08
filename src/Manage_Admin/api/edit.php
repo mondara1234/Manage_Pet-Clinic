@@ -15,7 +15,7 @@
     <link href="../../assets/dist/css/icons/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
     <link href="../../assets/dist/css/style.min.css" rel="stylesheet">
     <link href="../../assets/dist/css/styleCommon.css" rel="stylesheet">
-	<title> การแก้ไขข้อมูล ผู้ดูแลระบบ </title>
+	<title> การแก้ไขข้อมูล สัตวแพทย์ </title>
 </head>
 <body class="bg-container">
     <?php
@@ -38,9 +38,17 @@
         $queryAdminmanage = mysqli_query($conn, $sqlAdminmanage);
         $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
 
+    $status =$resultUser['Status'];
+    $name =$resultUser['name'];
+    if($status === 'superadmin'){
         $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ'";
         $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
         $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
+    }else{
+        $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ' AND Responsible = '$name'";
+        $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
+        $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
+    }
     ?>
     <!-- ============================================================== -->
     <!-- ส่วนหัว - ใช้ style จาก pages.scss -->
@@ -54,7 +62,7 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">การแก้ไขข้อมูล ผู้ดูแลระบบ</h4>
+                        <h4 class="page-title">การแก้ไขข้อมูล สัตวแพทย์</h4>
                     </div>
                 </div>
             </div>
@@ -98,7 +106,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td width="20%" align="right"><b style="margin-right: 2%;"> การอนุญาติใช้งาน :</b></td>
+                                <td width="20%" align="right"><b style="margin-right: 2%;"> การอนุญาตใช้งาน :</b></td>
                                 <td width="80%">
                                     <select name="Permission" id="Permission">
                                         <option value="allow" <?php if($result["Permission"]=="allow") echo 'selected="selected"'; ?>>อนุญาต</option>

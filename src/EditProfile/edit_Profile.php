@@ -33,9 +33,17 @@
     $queryAdminmanage = mysqli_query($conn, $sqlAdminmanage);
     $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
 
-    $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ'";
-    $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
-    $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
+    $status =$resultUser['Status'];
+    $name =$resultUser['name'];
+    if($status === 'superadmin'){
+        $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ'";
+        $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
+        $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
+    }else{
+        $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ' AND Responsible = '$name'";
+        $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
+        $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
+    }
     ?>
     <!-- ============================================================== -->
     <!-- ส่วนหัว - ใช้ style จาก pages.scss -->
@@ -55,7 +63,7 @@
                                 <i class="fa fa-user " style="color: red"></i>
                                 <font>สถานะผู้ใช้งาน</font>
                             </div>
-                            <div class="font-16" align="center" style="color: red"><b><?php echo $resultUser["Status"]=== 'สัตวแพทย์' ? 'สัตวแพทย์' : 'ผู้ดูแลระบบ'; ?></b></div>
+                            <div class="font-16" align="center" style="color: red"><b><?php echo $resultUser["Status"]=== 'admin' ? 'สัตวแพทย์' : 'ผู้ดูแลระบบ'; ?></b></div>
                         </div>
                     </div>
                 </div>
@@ -68,25 +76,25 @@
                     <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
                     <div class="row justify-content-between">
                         <div class="font-16" align="center" style="width: 60%; margin-left: 5%">
-                            <div style="margin-left: -48%">
+                            <div style="margin-left: -29%">
                                 <font class="font-18">UserName :</font>
                                 <input type="text" name="UserNameAD" value="<?php echo $resultUser["user"]; ?>" readonly>
                                 <input type="hidden" name="UserID" value="<?php echo $resultUser["id"]; ?>">
                             </div>
-                            <div class="m-t-10" style="margin-left: -27%">
+                            <div class="m-t-10" style="margin-left: -10%">
                                 <font class="font-18">Password :</font>
                                 <input type="password" name="Password" value="<?php echo $resultUser["password"]; ?>">
                                 <font class="font-14" style="color: red">(อย่างน้อย 6 ตัวขึ้นไป)</font>
                             </div>
-                            <div class="m-t-10" style="margin-left: -42%">
+                            <div class="m-t-10" style="margin-left: -23%">
                                 <font class="font-18">Email :</font>
                                 <input type="email" name="Email" value="<?php echo $resultUser["email"]; ?>">
                             </div>
-                            <div class="m-t-10" style="margin-left: -51%">
+                            <div class="m-t-10" style="margin-left: -31%">
                                 <font class="font-18">ชื่อ - นามสกุล :</font>
                                 <input type="text" name="FirstName" value="<?php echo $resultUser["name"]; ?>">
                             </div>
-                            <div class="m-t-10" style="margin-left: -51%">
+                            <div class="m-t-10" style="margin-left: -31%">
                                 <font class="font-18">เบอร์โทรศัพท์ :</font>
                                 <input type="number" name="Telephone" value="<?php echo $resultUser["phone"]; ?>">
                             </div>

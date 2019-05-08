@@ -24,28 +24,19 @@
         }
     </style>
 </head>
-<body style="background-image: url('./assets/images/background/bg_web.png'); background-size: 100% 100%;">
+<body style="background-image: url('./assets/images/background/bg_web.jpg'); background-size: 100% 100%;">
     <form name="add" method="post" action="./Database/InsertAdmin.php" enctype="multipart/form-data" target="iframe_target">
         <iframe id="iframe_target" name="iframe_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
-        <p style="margin-left: 30%; margin-top: 2%">
-            <font  size="20" color="white">ลงทะเบียน</font>
-        </p>
         <div
                 class="row justify-content-between"
                 style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%"
         >
-            <div style="margin-left: 18%">
-                <div style="margin-top: 100%; margin-left: -40%">
-                    <font Face="Monotype Corsiva" size="40" color="black">Manage</font>
-                </div>
-                <div style="margin-top: -27%; margin-left: 42%">
-                    <font Face="Monotype Corsiva" size="40" color="black">Pet</font>
-                </div>
-                <div style="margin-top: -27%; margin-left: 62%" class="hex">
-                    <font Face="Monotype Corsiva" size="40" color="#d6913a">Clinic</font>
-                </div>
+            <div >
             </div>
-            <div style="margin-top: 5%;">
+            <div>
+                <p style="margin-left: 15%; margin-top: -20%">
+                    <font color="black" style="font-size: 40px;">ลงทะเบียน</font>
+                </p>
                 <table cellpadding="5">
                     <tr>
                         <td align="right" class="font-18" style="color: black">ชื่อผู้ใช้ :</td>
@@ -86,7 +77,7 @@
                 </div>
                 <div style="margin-left: 20%; margin-top: 5%">
                     <label class="font-16" style="color: black">คุณมีบัญชีหรือยัง ?</label>
-                    <a href="../index.html" class="font-18" style="margin-left: 5%; color: white">Login</a>
+                    <a href="../index.html" class="font-18" style="margin-left: 5%; color: #ff8000">Login</a>
                 </div>
             </div>
         </div>

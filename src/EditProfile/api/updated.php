@@ -7,8 +7,6 @@ $UserID = $_POST["UserID"];
 $Password = $_POST["Password"];
 $Email = $_POST["Email"];
 $FirstName = $_POST["FirstName"];
-$LastName = $_POST["LastName"];
-$Address = $_POST["Address"];
 $Telephone = $_POST["Telephone"];
 
 $old_img = $_POST["ImgProfile"];
@@ -22,21 +20,7 @@ if ($_FILES["pImgProfile"]["name"] !== ""){
     $ImgProfile = $old_img;
 }
 
-if(empty($UserName) ||
-    empty($Password) ||
-    empty($Email) ||
-    empty($FirstName) ||
-    empty($LastName) ||
-    empty($Address) ||
-    empty($Telephone)) {
-    $message = "กรุณากรอกข้อมูลให้ครบ";
-    echo (
-    "<script LANGUAGE='JavaScript'>
-            window.alert('$message');
-            window.location.href='../edit_Profile.php?UserName=$UserNameold';
-        </script>"
-    );
-}elseif(strlen($Password) < 6){
+if(strlen($Password) < 6){
     $message = "รหัสผ่านต้องมีอย่างน้อย 6 ตัว";
     echo (
     "<script LANGUAGE='JavaScript'>
@@ -68,24 +52,22 @@ if(empty($UserName) ||
         </script>"
     );
 }else{
-    $Sql_Query = "select * from adminmanage where UserName = '$UserName'";
+    $Sql_Query = "select * from admin where user = '$UserName'";
 
     $query = mysqli_query($conn, $Sql_Query);
 
     $result = mysqli_fetch_array($query, MYSQLI_ASSOC);
 
     if($result){
-        if($result["UserName"] === $UserNameold){
-            $sql = "UPDATE adminmanage SET 
-                        UserName = '$UserName',
-                        Password = '$Password',
-                        Email = '$Email',
-                        FirstName = '$FirstName',
-                        LastName = '$LastName',
-                        Address = '$Address',
-                        Telephone = '$Telephone',
-                        ImgProfile = '$ImgProfile'
-                        WHERE ID = $UserID ";
+        if($result["user"] === $UserNameold){
+            $sql = "UPDATE admin SET 
+                        user = '$UserName',
+                        password = '$Password',
+                        email = '$Email',
+                        name = '$FirstName',
+                        phone = '$Telephone',
+                        pic = '$ImgProfile'
+                        WHERE id = $UserID ";
 
             $query = mysqli_query($conn, $sql);
 

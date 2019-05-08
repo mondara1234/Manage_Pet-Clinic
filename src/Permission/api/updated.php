@@ -13,9 +13,9 @@
 	$PrimissionTh = '';
 
     if($Permission === 'allow'){
-        $PrimissionTh = 'อนุญาติ';
+        $PrimissionTh = 'อนุญาต';
     }else if($Permission === 'disallow'){
-        $PrimissionTh = 'ไม่อนุญาติ';
+        $PrimissionTh = 'ไม่อนุญาต';
     }
 
 	if($query){

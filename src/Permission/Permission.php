@@ -39,9 +39,17 @@
         $querymanage = mysqli_query($conn, $sqlmanage);
         $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
 
+    $status =$resultUser['Status'];
+    $name =$resultUser['name'];
+    if($status === 'superadmin'){
         $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ'";
         $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
         $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
+    }else{
+        $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ' AND Responsible = '$name'";
+        $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
+        $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
+    }
 
         $sqlAdminmanage = "SELECT COUNT(*) as totalAdminmanage FROM admin WHERE Permission = 'pending' ";
         $queryAdminmanage = mysqli_query($conn, $sqlAdminmanage);
@@ -106,17 +114,17 @@
                                                     </font>
                                                 </div>
                                                 <div class="row justify-content-between align-items-center m-b-5" >
-                                                    <form name="edit" action="api/updated.php?UserName=<?php echo($_GET["user"]); ?>" method="post" enctype="multipart/form-data" >
-                                                        <input type="hidden" name="UserID" value="<?php echo ($result["ID"]);?>"/>
+                                                    <form name="edit" action="api/updated.php?UserName=<?php echo($_GET["UserName"]); ?>" method="post" enctype="multipart/form-data" >
+                                                        <input type="hidden" name="UserID" value="<?php echo ($result["id"]);?>"/>
                                                         <input type="hidden" name="Permission" value="allow" />
-                                                        <button  class="font-12" style=" color: white; background: #068e81;">
+                                                        <button  class="font-12" style=" color: #761c19; background: #f5b57f;">
                                                             อนุญาต
                                                         </button>
                                                     </form>
-                                                    <form name="edit" action="api/updated.php?UserName=<?php echo($_GET["user"]); ?>" method="post" enctype="multipart/form-data">
-                                                        <input type="hidden" name="UserID" value="<?php echo ($result["ID"]);?>" />
+                                                    <form name="edit" action="api/updated.php?UserName=<?php echo($_GET["UserName"]); ?>" method="post" enctype="multipart/form-data">
+                                                        <input type="hidden" name="UserID" value="<?php echo ($result["id"]);?>" />
                                                         <input type="hidden" name="Permission" value="disallow" />
-                                                        <button  class="font-12" style=" color: white; background: #068e81;">
+                                                        <button  class="font-12" style=" color: black; background: #f5b57f;">
                                                             ไม่อนุญาต
                                                         </button>
                                                     </form>

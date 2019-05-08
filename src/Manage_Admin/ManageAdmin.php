@@ -17,7 +17,7 @@
     <link href="../assets/dist/css/style.min.css" rel="stylesheet">
     <link href="../assets/dist/css/styleCommon.css" rel="stylesheet">
 
-    <title>ฐานข้อมูล ผู้ดูแลระบบ</title>
+    <title>ฐานข้อมูล สัตวแพทย์</title>
 
 </head>
 
@@ -31,11 +31,11 @@
 
         include('../Database/connect.php');
 
-        $sql = "SELECT * FROM admin WHERE user LIKE '%".$Search."%' ";
+        $sql = "SELECT * FROM admin WHERE user LIKE '%".$Search."%' AND Status = 'admin' OR name LIKE '%".$Search."%' AND Status = 'admin'";
         $query = mysqli_query($conn, $sql);
 
         $UserName = $_GET["UserName"];
-        $sqlmanage = "SELECT * FROM admin WHERE user = '$UserName' ";
+        $sqlmanage = "SELECT * FROM admin WHERE user = '$UserName'";
         $querymanage = mysqli_query($conn, $sqlmanage);
         $resultUser = mysqli_fetch_array($querymanage, MYSQLI_ASSOC);
 
@@ -43,9 +43,17 @@
         $queryAdminmanage = mysqli_query($conn, $sqlAdminmanage);
         $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
 
+    $status =$resultUser['Status'];
+    $name =$resultUser['name'];
+    if($status === 'superadmin'){
         $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ'";
         $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
         $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
+    }else{
+        $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ' AND Responsible = '$name'";
+        $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
+        $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
+    }
     ?>
     <!-- ============================================================== -->
     <!-- ส่วนหัว - ใช้ style จาก pages.scss -->
@@ -59,7 +67,7 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">ฐานข้อมูล ผู้ดูแลระบบ</h4>
+                        <h4 class="page-title">ฐานข้อมูล สัตวแพทย์</h4>
                     </div>
                 </div>
             </div>
@@ -71,7 +79,7 @@
                     <form name="search" method="post">
                         <table width="80%" border="0">
                             <tr>
-                                <th> <div align="center" class="font-16"> ชื่อผู้ดูแลระบบ :
+                                <th> <div align="center" class="font-16"> ชื่อผู้ใช้ หรือ ชื่อสัตวแพทย์ :
                                         <input name="txtSearch" type="text" id="txtSearch" value="<?php echo($Search); ?>" />
                                         <input type="submit" value="ค้นหา" />
                                     </div>

@@ -15,7 +15,7 @@
     <link href="../../assets/dist/css/icons/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
     <link href="../../assets/dist/css/style.min.css" rel="stylesheet">
     <link href="../../assets/dist/css/styleCommon.css" rel="stylesheet">
-    <title> การเพิ่มข้อมูล ผู้ดูแลระบบ </title>
+    <title> การเพิ่มข้อมูล สัตวแพทย์ </title>
 </head>
 <body class="bg-container">
 <?php
@@ -30,9 +30,17 @@ $sqlAdminmanage = "SELECT COUNT(*) as totalAdminmanage FROM admin WHERE Permissi
 $queryAdminmanage = mysqli_query($conn, $sqlAdminmanage);
 $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
 
-$sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ'";
-$queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
-$resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
+$status =$resultUser['Status'];
+$name =$resultUser['name'];
+if($status === 'superadmin'){
+    $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ'";
+    $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
+    $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
+}else{
+    $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ' AND Responsible = '$name'";
+    $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
+    $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
+}
 ?>
 <!-- ============================================================== -->
 <!-- ส่วนหัว - ใช้ style จาก pages.scss -->
@@ -46,7 +54,7 @@ $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC)
         <div class="page-breadcrumb">
             <div class="row">
                 <div class="col-12 d-flex no-block align-items-center">
-                    <h4 class="page-title">การเพิ่มข้อมูล ผู้ดูแลระบบ</h4>
+                    <h4 class="page-title">การเพิ่มข้อมูล สัตวแพทย์</h4>
                 </div>
             </div>
         </div>
@@ -80,7 +88,7 @@ $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC)
                             <input type="hidden" name="date" id="date" value="<?php echo date('Y-m-d');?>"/>
                         </tr>
                         <tr>
-                            <td width="20%" align="right"><b style="margin-right: 2%;"> การอนุญาติใช้งาน :</b></td>
+                            <td width="20%" align="right"><b style="margin-right: 2%;"> การอนุญาตใช้งาน :</b></td>
                             <td width="80%">
                                 <select name="Permission" id="Permission">
                                     <option value="allow" selected>อนุญาต</option>

@@ -39,12 +39,19 @@
         $queryAdminmanage = mysqli_query($conn, $sqlAdminmanage);
         $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
 
-        $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ'";
-        $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
-        $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
 
         $usetname = $resultUser['name'];
         $status = $resultUser['Status'];
+        if($status === 'superadmin'){
+            $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ'";
+            $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
+            $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
+        }else{
+            $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ' AND Responsible = '$usetname'";
+            $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
+            $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
+        }
+
         if($status === 'superadmin'){
             $sql = "SELECT * FROM postponement WHERE user LIKE '%".$Search."%' AND status != 'อนุมัติ' OR nameuser LIKE '%".$Search."%' AND status != 'อนุมัติ' order by old_date desc ";
             $query = mysqli_query($conn, $sql);

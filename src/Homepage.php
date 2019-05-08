@@ -28,9 +28,17 @@
     $queryAdminmanage = mysqli_query($conn, $sqlAdminmanage);
     $resultAdminmanage = mysqli_fetch_array($queryAdminmanage, MYSQLI_ASSOC);
 
-    $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ'";
-    $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
-    $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
+   $status =$result['Status'];
+    $name =$result['name'];
+    if($status === 'superadmin'){
+        $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ'";
+        $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
+        $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
+    }else{
+        $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ' AND Responsible = '$name'";
+        $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
+        $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
+    }
 
     $Search = null;
     if(isset($_POST["txtSearch"]))
@@ -155,19 +163,11 @@
 
                         <?php
                         $x = 0;
-                        $users = '';
-
-                        $Responsible = $result["name"];
-                        $status = $result["Status"];
 
                         while($result = mysqli_fetch_array($querys, MYSQLI_ASSOC))
                         {
                             $x = $x + 1;
-                            $users = $result["user"];
 
-                            $sqlResponsible = "SELECT * FROM sledging WHERE user = '$users' AND Responsible = '$Responsible' LIMIT 1 ";
-                            $queryResponsible = mysqli_query($conn, $sqlResponsible);
-                            $resultResponsible = mysqli_fetch_array($queryResponsible, MYSQLI_ASSOC);
 
                             ?>
                             <tr>
@@ -182,8 +182,8 @@
                                 <td align="center" style="width: 10%"><?php echo ($result["sexAnimal"]) ?></td>
                                 <td align="center" style="width: 10%"><?php echo ($result["birthAnimal"]) ?></td>
                                 <td align="center" style="width: 7%"><?php echo ($result["breedAnimal"]) ?></td>
-                                <td align="center" style="width: 15%"><?php echo ($resultResponsible["Responsible"]) ?></td>
-                                <td align="center" style="width: 10%"><?php echo ($resultResponsible["phoneVeterinary"]) ?></td>
+                                <td align="center" style="width: 15%"><?php echo ($result["nameVeterinary"]) ?></td>
+                                <td align="center" style="width: 10%"><?php echo ($result["phoneVeterinary"]) ?></td>
                             </tr>
 
                             <?php
