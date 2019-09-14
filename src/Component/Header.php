@@ -43,6 +43,24 @@
                     </a>
                 </li>
                 <li class="sidebar-item font-14">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../../src/Magdcine_store/ManageDrug.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
+                        <i class="mdi mdi-medical-bag"></i>
+                        <span class="hide-menu p-r-10"> คลังยา </span>
+                    </a>
+                </li>
+                <li class="sidebar-item font-14">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../../src/Treatment_receipt/Number_identification.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
+                        <i class="mdi mdi-receipt"></i>
+                        <span class="hide-menu p-r-10"> สร้างใบเสร็จการรักษา </span>
+                    </a>
+                </li>
+                <li class="sidebar-item font-14">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../../src/Treatment_receipt/showdata_Receipt.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
+                        <i class="mdi mdi-history"></i>
+                        <span class="hide-menu p-r-10"> ประวัติการรักษา </span>
+                    </a>
+                </li>
+                <li class="sidebar-item font-14">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../../src/postponement/Show_Postponement.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
                         <i class="mdi mdi-alarm-plus"></i>
                         <span class="hide-menu p-r-10"> การขอเลื่อนนัด </span>
@@ -93,6 +111,24 @@
                             </a>
                         </li>
                     </ul>
+                </li>
+                <li class="sidebar-item font-14">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../../src/Magdcine_store/ManageDrug.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
+                        <i class="mdi mdi-medical-bag"></i>
+                        <span class="hide-menu p-r-10"> คลังยา </span>
+                    </a>
+                </li>
+                <li class="sidebar-item font-14">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../../src/Treatment_receipt/Number_identification.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
+                        <i class="mdi mdi-receipt"></i>
+                        <span class="hide-menu p-r-10"> สร้างใบเสร็จการรักษา </span>
+                    </a>
+                </li>
+                <li class="sidebar-item font-14">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../../src/Treatment_receipt/showdata_Receipt.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
+                        <i class="mdi mdi-history"></i>
+                        <span class="hide-menu p-r-10"> ประวัติการรักษา </span>
+                    </a>
                 </li>
                 <li class="sidebar-item font-14">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="../../src/postponement/Show_Postponement.php?UserName=<?php echo($_GET["UserName"]); ?>" aria-expanded="false">
