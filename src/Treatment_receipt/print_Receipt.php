@@ -82,7 +82,7 @@ if($id!=''){
                 <label for="date" >เลขที่ใบเสร็จ :</label><br>
                 <label for="name_customer" >ชื่อลูกค้า :</label><br>
                 <label for="name_animals" >ชื่่อสัตว์เลี้ยง  :</label><br>
-                <label for="tel_customer" >เบอร์โทรเจ้าของสัตว์เลี้ยง :</label><br>
+                <label for="tel_customer" >เบอร์โทรลูกค้า :</label><br>
                 <label for="name_caretaker" >ชื่อผู้ดูแล :</label><br>
                 <label for="tel_caretaker" >เบอร์โทรผู้ดูแล :</label>
             </td>
@@ -104,11 +104,11 @@ if($id!=''){
      <b class="font-18">รายการจ่ายยา</b> <br><br>
             <table width="98%" border="1" align="center" class="font-16">
                 <tr>
-                    <td width="20px"><center>ลำดับ</center></td>
-                    <td width="200px"><center>รายการ</center></td>
-                    <td width="40px"><center>จำนวน</center></td>
-                    <td width="90px"><center>ราคา/หน่วย(บาท)</center></td>
-                    <td width="50px"><center>จำนวนเงิน(บาท)</center></td>
+                    <td width="20px"><center><b>ลำดับ</b></center></td>
+                    <td width="200px"><center><b>รายการ</b></center></td>
+                    <td width="40px"><center><b>จำนวน</b></center></td>
+                    <td width="90px"><center><b>ราคา/หน่วย(บาท)</b></center></td>
+                    <td width="50px"><center><b>จำนวนเงิน(บาท)</b></center></td>
                 </tr>
                 <?php
                     while($rowList = mysqli_fetch_assoc($resultList)) {

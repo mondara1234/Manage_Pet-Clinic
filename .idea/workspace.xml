@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bdd1bc3-2df5-45eb-a379-6a7795650da3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Treatment_receipt/print_Receipt.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/print_icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/Header.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/HeaderEdit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/HeaderEdit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Component/HeaderHome.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/HeaderHome.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Treatment_receipt/Number_identification.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Treatment_receipt/Number_identification.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Treatment_receipt/Receipt.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Treatment_receipt/Receipt.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Treatment_receipt/print_Receipt.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Treatment_receipt/print_Receipt.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Treatment_receipt/showdata_Receipt.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Treatment_receipt/showdata_Receipt.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,23 +17,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Receipt.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Receipt.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Treatment_receipt/Receipt.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="197" column="16" lean-forward="true" selection-start-line="197" selection-start-column="16" selection-end-line="197" selection-end-column="16" />
+            <state relative-caret-position="153">
+              <caret line="167" column="39" selection-start-line="167" selection-start-column="39" selection-end-line="167" selection-end-column="39" />
               <folding>
-                <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#3;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="print_Receipt.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="print_Receipt.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Treatment_receipt/print_Receipt.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="102" column="12" selection-start-line="102" selection-start-column="12" selection-end-line="102" selection-end-column="12" />
+            <state relative-caret-position="438">
+              <caret line="110" column="62" selection-start-line="110" selection-start-column="62" selection-end-line="110" selection-end-column="62" />
               <folding>
                 <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -46,20 +44,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Magdcine_store/api/edit.php">
+      <file leaf-file-name="showdata_Receipt.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Treatment_receipt/showdata_Receipt.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="90" column="47" selection-start-line="90" selection-start-column="47" selection-end-line="90" selection-end-column="74" />
+            <state relative-caret-position="425">
+              <caret line="76" column="71" selection-start-line="76" selection-start-column="71" selection-end-line="76" selection-end-column="71" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="showdata_Receipt.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Treatment_receipt/showdata_Receipt.php">
+      <file leaf-file-name="Number_identification.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Treatment_receipt/Number_identification.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="116" column="200" selection-start-line="116" selection-start-column="200" selection-end-line="116" selection-end-column="200" />
+            <state relative-caret-position="223">
+              <caret line="86" column="13" lean-forward="true" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="40" />
+              <folding>
+                <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#3;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -138,10 +140,10 @@
         <option value="$PROJECT_DIR$/src/Component/HeaderEdit.php" />
         <option value="$PROJECT_DIR$/src/Component/HeaderHome.php" />
         <option value="$PROJECT_DIR$/../CarRepaircenter/connect.php" />
-        <option value="$PROJECT_DIR$/src/Treatment_receipt/Number_identification.php" />
         <option value="$PROJECT_DIR$/src/Treatment_receipt/showdata_Receipt.php" />
-        <option value="$PROJECT_DIR$/src/Treatment_receipt/print_Receipt.php" />
+        <option value="$PROJECT_DIR$/src/Treatment_receipt/Number_identification.php" />
         <option value="$PROJECT_DIR$/src/Treatment_receipt/Receipt.php" />
+        <option value="$PROJECT_DIR$/src/Treatment_receipt/print_Receipt.php" />
       </list>
     </option>
   </component>
@@ -280,12 +282,12 @@
       <workItem from="1568401874862" duration="5898000" />
       <workItem from="1568481301656" duration="14906000" />
       <workItem from="1568514107066" duration="129000" />
-      <workItem from="1568574499629" duration="5089000" />
+      <workItem from="1568574499629" duration="5727000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80870000" />
+    <option name="totallyTimeSpent" value="81508000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -650,24 +652,6 @@
         <state relative-caret-position="-2259" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Treatment_receipt/Number_identification.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="140" selection-end-column="55" />
-          <folding>
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#3;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Treatment_receipt/showdata_Receipt.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="116" column="200" selection-start-line="116" selection-start-column="200" selection-end-line="116" selection-end-column="200" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Magdcine_store/api/edit.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
@@ -675,23 +659,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Treatment_receipt/print_Receipt.php">
+    <entry file="file://$PROJECT_DIR$/src/Treatment_receipt/showdata_Receipt.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="102" column="12" selection-start-line="102" selection-start-column="12" selection-end-line="102" selection-end-column="12" />
+        <state relative-caret-position="425">
+          <caret line="76" column="71" selection-start-line="76" selection-start-column="71" selection-end-line="76" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Treatment_receipt/Number_identification.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="86" column="13" lean-forward="true" selection-start-line="86" selection-start-column="13" selection-end-line="86" selection-end-column="40" />
           <folding>
-            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#3;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Treatment_receipt/Receipt.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="197" column="16" lean-forward="true" selection-start-line="197" selection-start-column="16" selection-end-line="197" selection-end-column="16" />
+        <state relative-caret-position="153">
+          <caret line="167" column="39" selection-start-line="167" selection-start-column="39" selection-end-line="167" selection-end-column="39" />
           <folding>
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#3;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Treatment_receipt/print_Receipt.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="110" column="62" selection-start-line="110" selection-start-column="62" selection-end-line="110" selection-end-column="62" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

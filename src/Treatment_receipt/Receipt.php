@@ -162,29 +162,28 @@ date_default_timezone_set("Asia/Bangkok");
           </tr>
           <tr>
             <td>
+                <br>
                <table width="61%" border="0" class="font-16" style="margin-left: 19%" >
                  <tr>
-                      <td>
-                          <br>
-                          <label for="name_customer" style="margin-left: 63%">ชื่อลูกค้า :</label><br>
-                          <label for="name_animals" style="margin-left: 50%">ชื่่อสัตว์เลี้ยง  :</label><br>
-                          <label for="tel_customer" style="margin-left: 2%">เบอร์โทรเจ้าของสัตว์เลี้ยง :</label>
+                      <td align="right">
+                          <label for="name_customer">ชื่อลูกค้า :</label><br>
+                          <label for="name_animals">ชื่่อสัตว์เลี้ยง :</label><br>
+                          <label for="tel_customer">เบอร์โทรลูกค้า :</label>
                       </td>
-                     <td>
-                         <input type="text" name="name_customer" id="name_customer" value="<?php echo $_POST['name_customer'] ?>" style="margin-top: 10%" readonly><br>
+                     <td style="padding-left: 1%">
+                         <input type="text" name="name_customer" id="name_customer" value="<?php echo $_POST['name_customer'] ?>" readonly><br>
                          <input type="text" name="name_animals" id="name_animals" value="<?php echo $_POST['name_animals'] ?>" readonly><br>
                          <input type="tel" name="tel_customer" id="tel_customer" value="<?php echo $_POST['tel_customer'] ?>" readonly>
                      </td>
-                      <td>
-                      <br>
-                          <label for="date" style="margin-left: 10%">เลขที่ใบเสร็จ :</label><br>
-                          <label for="date" style="margin-left: 62%">วันที่ :</label><br>
-                          <label for="name_caretaker" style="margin-left: 34%">ชื่อผู้ดูแล :</label><br>
+                      <td align="right">
+                          <label for="date">เลขที่ใบเสร็จ :</label><br>
+                          <label for="date" >วันที่ :</label><br>
+                          <label for="name_caretaker">ชื่อผู้ดูแล :</label><br>
                           <label for="tel_caretaker">เบอร์โทรผู้ดูแล :</label>
 
                       </td>
-                     <td>
-                         <input type="text" name="document_number" id="document_number" style="margin-top: 10%"  value="<?php echo $_POST['document_number'] ?>" readonly><br>
+                     <td  style="padding-left: 1%">
+                         <input type="text" name="document_number" id="document_number" value="<?php echo $_POST['document_number'] ?>" readonly><br>
                          <input type="text" name="date" id="date" value="<?php echo date('d-m-Y') ?>" readonly><br>
                          <input type="hidden" name="dateformat" id="dateformat" value="<?php echo date('Y-m-d') ?>" readonly>
                          <input type="text" name="name_caretaker" id="name_caretaker" value="<?php echo $_POST['name_caretaker'] ?>" readonly><br>

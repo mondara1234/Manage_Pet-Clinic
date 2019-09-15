@@ -74,7 +74,7 @@ date_default_timezone_set("Asia/Bangkok");
             <table width="100%" border="0">
                 <tr>
                     <th>
-                        <div align="center" class="font-16"> ชื่อเจ้าของสัตว์เลี้ยง หรือ ชื่อผู้ดูแล หรือ วันที่ หรือ เลขที่ใบเสร็จ :
+                        <div align="center" class="font-16"> ชื่อลูกค้า หรือ ชื่อผู้ดูแล หรือ วันที่ หรือ เลขที่ใบเสร็จ :
                             <input name="txtSearch" type="text" id="txtSearch" value="<?php echo($Search); ?>" />
                             <input type="submit" value="ค้นหา" />
                         </div>

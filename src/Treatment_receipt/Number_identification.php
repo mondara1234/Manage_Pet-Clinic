@@ -81,26 +81,26 @@ date_default_timezone_set("Asia/Bangkok");
   </tr>
   <tr>
     <td>
-       <table width="100%" border="0" class="font-16"  >
+        <br>
+       <table width="100%" border="0" class="font-16" >
          <tr>
-          <td>
-          <br>
-             <label for="name_customer" style="margin-left: 25%">ชื่อเจ้าของสัตว์เลี้้ยง :</label><br>
-              <label for="address" style="margin-left: 50%">ชื่่อสัตว์เลี้ยง :</label><br>
-             <label for="tel_customer" style="margin-left: 6%">เบอร์โทรเจ้าของสัตว์เลี้ยง :</label>
+          <td align="right" valign="top">
+             <label for="name_customer">ชื่อลูกค้า :</label><br>
+              <label for="address">ชื่่อสัตว์เลี้ยง :</label><br>
+             <label for="tel_customer">เบอร์โทรลูกค้า :</label>
           </td>
-             <td>
-                 <input type="text" name="name_customer" style="margin-top: 9%" required><br>
+             <td style="padding-left: 1%">
+                 <input type="text" name="name_customer" required><br>
                  <input type="text" class="font-16" name="name_animals" required><br>
                  <input type="tel" name="tel_customer" required>
              </td>
-          <td>
-              <label for="numbergas" style="margin-left: 15%">เลขที่ใบเสร็จ :</label><br>
-              <label for="numbergas" style="margin-left: 36%">ชื่อผู้ดูแล :</label><br>
-              <label for="brandcar" style="margin-left: 5%">เบอร์โทรผู้ดูแล :</label>
+          <td align="right">
+              <label for="numbergas">เลขที่ใบเสร็จ :</label><br>
+              <label for="numbergas">ชื่อผู้ดูแล :</label><br>
+              <label for="brandcar">เบอร์โทรผู้ดูแล :</label>
           </td>
-             <td>
-                 <input type="text" name="document_number" style="margin-top: -5%" onkeyup=*if(this.value*1!=this.value) this.value="";* value="<?php echo $auto_number ?>" readonly><br>
+             <td style="padding-left: 1%">
+                 <input type="text" name="document_number" onkeyup=*if(this.value*1!=this.value) this.value="";* value="<?php echo $auto_number ?>" readonly><br>
                  <input type="text" name="name_caretaker" required><br>
                  <input type="tel" name="tel_caretaker" required>
              </td>
