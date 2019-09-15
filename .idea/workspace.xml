@@ -2,21 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bdd1bc3-2df5-45eb-a379-6a7795650da3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Magdcine_store/ManageDrug.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Magdcine_store/api/InsertDrug.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Magdcine_store/api/delete.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Magdcine_store/api/edit.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Magdcine_store/api/insert.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Magdcine_store/api/updated.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Treatment_receipt/Insert_Receipt.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Treatment_receipt/Number_identification.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Treatment_receipt/Receipt.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Treatment_receipt/deletedata_Receipt.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Treatment_receipt/showdata_Receipt.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Treatment_receipt/print_Receipt.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/print_icon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/Header.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/Header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/HeaderEdit.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/HeaderEdit.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Component/HeaderHome.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Component/HeaderHome.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Treatment_receipt/Number_identification.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Treatment_receipt/Number_identification.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Treatment_receipt/Receipt.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Treatment_receipt/Receipt.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Treatment_receipt/showdata_Receipt.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Treatment_receipt/showdata_Receipt.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,23 +24,42 @@
       <file leaf-file-name="Receipt.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Treatment_receipt/Receipt.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="180" column="37" selection-start-line="180" selection-start-column="37" selection-end-line="180" selection-end-column="37" />
+            <state relative-caret-position="663">
+              <caret line="197" column="16" lean-forward="true" selection-start-line="197" selection-start-column="16" selection-end-line="197" selection-end-column="16" />
               <folding>
-                <element signature="n#style#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#td#2;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#label#0;n#td#2;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#td#3;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Number_identification.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Treatment_receipt/Number_identification.php">
+      <file leaf-file-name="print_Receipt.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Treatment_receipt/print_Receipt.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="91" column="96" lean-forward="true" selection-start-line="91" selection-start-column="17" selection-end-line="91" selection-end-column="96" />
+            <state relative-caret-position="353">
+              <caret line="102" column="12" selection-start-line="102" selection-start-column="12" selection-end-line="102" selection-end-column="12" />
+              <folding>
+                <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Magdcine_store/api/edit.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="90" column="47" selection-start-line="90" selection-start-column="47" selection-end-line="90" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="showdata_Receipt.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Treatment_receipt/showdata_Receipt.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="116" column="200" selection-start-line="116" selection-start-column="200" selection-end-line="116" selection-end-column="200" />
             </state>
           </provider>
         </entry>
@@ -66,6 +79,7 @@
       <find>80%</find>
       <find>valign=&quot;top&quot;</find>
       <find>ผู้ดูแลระบบ</find>
+      <find>document_number</find>
     </findStrings>
     <dirStrings>
       <dir>E:\xampp\htdocs\Manage_Pet-Clinic</dir>
@@ -77,8 +91,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Manage_User/api/updated.php" />
-        <option value="$PROJECT_DIR$/src/Treatment/InsertTreatment.php" />
         <option value="$PROJECT_DIR$/src/Sledging/Insertsledging.php" />
         <option value="$PROJECT_DIR$/src/Component/footer.php" />
         <option value="$PROJECT_DIR$/src/Database/logout.php" />
@@ -114,9 +126,6 @@
         <option value="$PROJECT_DIR$/../quotation.php" />
         <option value="$PROJECT_DIR$/../quotationCountManu.php" />
         <option value="$PROJECT_DIR$/src/Treatment_receipt/api/Insert_Receipt.php" />
-        <option value="$PROJECT_DIR$/src/Component/Header.php" />
-        <option value="$PROJECT_DIR$/src/Component/HeaderEdit.php" />
-        <option value="$PROJECT_DIR$/src/Component/HeaderHome.php" />
         <option value="$PROJECT_DIR$/src/Magdcine_store/api/InsertDrug.php" />
         <option value="$PROJECT_DIR$/src/Magdcine_store/api/delete.php" />
         <option value="$PROJECT_DIR$/src/Magdcine_store/ManageDrug.php" />
@@ -125,8 +134,13 @@
         <option value="$PROJECT_DIR$/src/Magdcine_store/api/updated.php" />
         <option value="$PROJECT_DIR$/src/Treatment_receipt/deletedata_Receipt.php" />
         <option value="$PROJECT_DIR$/src/Treatment_receipt/Insert_Receipt.php" />
-        <option value="$PROJECT_DIR$/src/Treatment_receipt/showdata_Receipt.php" />
+        <option value="$PROJECT_DIR$/src/Component/Header.php" />
+        <option value="$PROJECT_DIR$/src/Component/HeaderEdit.php" />
+        <option value="$PROJECT_DIR$/src/Component/HeaderHome.php" />
+        <option value="$PROJECT_DIR$/../CarRepaircenter/connect.php" />
         <option value="$PROJECT_DIR$/src/Treatment_receipt/Number_identification.php" />
+        <option value="$PROJECT_DIR$/src/Treatment_receipt/showdata_Receipt.php" />
+        <option value="$PROJECT_DIR$/src/Treatment_receipt/print_Receipt.php" />
         <option value="$PROJECT_DIR$/src/Treatment_receipt/Receipt.php" />
       </list>
     </option>
@@ -175,6 +189,19 @@
               <item name="Manage_Pet-Clinic" type="b2602c69:ProjectViewProjectNode" />
               <item name="Manage_Pet-Clinic" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Manage_Pet-Clinic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Manage_Pet-Clinic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Manage_Pet-Clinic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Manage_Pet-Clinic" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Magdcine_store" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -199,23 +226,23 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CarRepaircenter" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\xampp\htdocs\Manage_Pet-Clinic\src\Treatment_receipt" />
-      <recent name="E:\xampp\htdocs\Manage_Pet-Clinic\src\Magdcine_store" />
-      <recent name="E:\xampp\htdocs\Manage_Pet-Clinic\src\assets\images\background" />
-      <recent name="E:\xampp\htdocs\Manage_Pet-Clinic\src" />
-      <recent name="E:\xampp\htdocs\Manage_Pet-Clinic\src\postponement" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\xampp\htdocs\Manage_Pet-Clinic\src\Treatment_receipt\api" />
       <recent name="E:\xampp\htdocs\Manage_Pet-Clinic\src\Treatment_receipt" />
       <recent name="E:\xampp\htdocs\Manage_Pet-Clinic\src\Sledging" />
       <recent name="E:\xampp\htdocs\Manage_Pet-Clinic\src\Treatment" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\xampp\htdocs\Manage_Pet-Clinic\src\assets\images" />
+      <recent name="E:\xampp\htdocs\Manage_Pet-Clinic\src\Treatment_receipt" />
+      <recent name="E:\xampp\htdocs\Manage_Pet-Clinic\src\Magdcine_store" />
+      <recent name="E:\xampp\htdocs\Manage_Pet-Clinic\src\assets\images\background" />
+      <recent name="E:\xampp\htdocs\Manage_Pet-Clinic\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -252,28 +279,30 @@
       <workItem from="1557313248092" duration="6251000" />
       <workItem from="1568401874862" duration="5898000" />
       <workItem from="1568481301656" duration="14906000" />
+      <workItem from="1568514107066" duration="129000" />
+      <workItem from="1568574499629" duration="5089000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75652000" />
+    <option name="totallyTimeSpent" value="80870000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25716332" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3292683" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -288,7 +317,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25716332" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -311,41 +340,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Treatment/Treatment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="43" column="2" lean-forward="true" selection-start-line="43" selection-start-column="2" selection-end-line="43" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Treatment/InsertTreatment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sledging/Sledging.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/postponement/Show_Postponement.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="53" column="8" selection-start-line="53" selection-start-column="8" selection-end-line="53" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Manage_User/api/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Manage_User/api/InsertUser.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -496,13 +490,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Treatment_receipt/api/Insert_Receipt.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Treatment_receipt/api/Insert_Receipt.php" />
     <entry file="file://$USER_HOME$/Downloads/quotationCountManu.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2924">
@@ -524,27 +512,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Component/Header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="131" column="21" selection-start-line="131" selection-start-column="21" selection-end-line="131" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Component/HeaderEdit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="57" column="96" selection-start-line="57" selection-start-column="96" selection-end-line="57" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Component/HeaderHome.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="127" column="90" selection-start-line="127" selection-start-column="90" selection-end-line="127" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Manage_history/api/edit.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="985">
@@ -563,9 +530,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="458">
           <caret line="127" column="28" selection-start-line="127" selection-start-column="28" selection-end-line="127" selection-end-column="45" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#center#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -573,13 +537,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="81" column="112" selection-start-line="81" selection-start-column="112" selection-end-line="81" selection-end-column="112" />
-          <folding>
-            <element signature="n#style#0;n#iframe#0;n#form#0;n#center#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#form#0;n#center#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#center#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#td#1;n#tr#2;n#table#0;n#form#0;n#center#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#5;n#table#0;n#form#0;n#center#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -593,32 +550,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Magdcine_store/api/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="80" column="61" selection-start-line="80" selection-start-column="59" selection-end-line="80" selection-end-column="61" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#form#0;n#center#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#form#0;n#center#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#tr#0;n#table#0;n#form#0;n#center#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#tr#0;n#table#0;n#form#0;n#center#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#textarea#0;n#td#1;n#tr#2;n#table#0;n#form#0;n#center#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#1;n#tr#5;n#table#0;n#form#0;n#center#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Magdcine_store/api/updated.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="76" column="15" lean-forward="true" selection-start-line="76" selection-start-column="15" selection-end-line="76" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Magdcine_store/ManageDrug.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="134" column="95" selection-start-line="134" selection-start-column="91" selection-end-line="134" selection-end-column="95" />
         </state>
       </provider>
     </entry>
@@ -650,36 +585,113 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Component/Header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="129" column="76" selection-start-line="129" selection-start-column="76" selection-end-line="129" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Component/HeaderEdit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="129" column="76" selection-start-line="129" selection-start-column="76" selection-end-line="129" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Component/HeaderHome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="59" column="76" selection-start-line="59" selection-start-column="76" selection-end-line="59" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Magdcine_store/ManageDrug.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="64" column="12" lean-forward="true" selection-start-line="64" selection-start-column="12" selection-end-line="70" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/CarRepaircenter/CarRepaircenter/quotationCountManu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="140" column="58" lean-forward="true" selection-start-line="140" selection-start-column="58" selection-end-line="140" selection-end-column="58" />
+          <folding>
+            <element signature="e#7217#7223#0#HTML" expanded="true" />
+            <element signature="e#7223#7229#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Downloads/CarRepaircenter/CarRepaircenter/quotation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="288" column="54" lean-forward="true" selection-start-line="288" selection-start-column="54" selection-end-line="288" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../CarRepaircenter/connect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="56" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Treatment_receipt/Insert_Receipt.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="136" selection-start-line="11" selection-start-column="121" selection-end-line="11" selection-end-column="136" />
+        <state relative-caret-position="272">
+          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../CarRepaircenter/print_quotation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2259" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Treatment_receipt/Number_identification.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="140" selection-end-column="55" />
+          <folding>
+            <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#3;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Treatment_receipt/showdata_Receipt.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="35" column="34" lean-forward="true" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+        <state relative-caret-position="493">
+          <caret line="116" column="200" selection-start-line="116" selection-start-column="200" selection-end-line="116" selection-end-column="200" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Treatment_receipt/Number_identification.php">
+    <entry file="file://$PROJECT_DIR$/src/Magdcine_store/api/edit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="91" column="96" lean-forward="true" selection-start-line="91" selection-start-column="17" selection-end-line="91" selection-end-column="96" />
+        <state relative-caret-position="442">
+          <caret line="90" column="47" selection-start-line="90" selection-start-column="47" selection-end-line="90" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Treatment_receipt/print_Receipt.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="102" column="12" selection-start-line="102" selection-start-column="12" selection-end-line="102" selection-end-column="12" />
+          <folding>
+            <element signature="n#style#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Treatment_receipt/Receipt.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="180" column="37" selection-start-line="180" selection-start-column="37" selection-end-line="180" selection-end-column="37" />
+        <state relative-caret-position="663">
+          <caret line="197" column="16" lean-forward="true" selection-start-line="197" selection-start-column="16" selection-end-line="197" selection-end-column="16" />
           <folding>
-            <element signature="n#style#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#td#2;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#label#0;n#td#2;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#td#3;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#td#1;n#tr#0;n#table#0;n#td#0;n#tr#1;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

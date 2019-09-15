@@ -59,6 +59,13 @@ date_default_timezone_set("Asia/Bangkok");
 <div id="main-wrapper">
     <?php require_once '../Component/Header.php';?>
     <div class="page-wrapper">
+        <div class="page-breadcrumb">
+            <div class="row">
+                <div class="col-12 d-flex no-block align-items-center">
+                    <h4 class="page-title">ประวัติการออกใบเสร็จ</h4>
+                </div>
+            </div>
+        </div>
 <!-- โชว์ข้อมูล -->
 <br><br>
 <div class="container" style="margin-bottom: 3%">
@@ -96,8 +103,8 @@ $result = $conn->query($sql);
 if($result->num_rows>0){
 	$checkName ='';
 	while($row=$result->fetch_assoc()){ 
-if($checkName === $row["name_caretaker"]): ?>
- <?php else : $checkName = $row["name_caretaker"]; ?>
+if($checkName === $row["document_number"]): ?>
+ <?php else : $checkName = $row["document_number"]; ?>
   <tbody align="center">
     <tr>
         <td><?php echo $row["document_number"];?></td>
@@ -107,7 +114,7 @@ if($checkName === $row["name_caretaker"]): ?>
       <td><?php echo $row["TotalAll"];?></td>
       <td><a href="deletedata_Receipt.php?document_number=<?php echo $row['document_number'];?>&UserName=<?php echo($_GET["UserName"]); ?>">
           <button type="button" class="btn btn-danger">ลบ</button></a></td>
-          <td><a href="print_quotation.php?id=<?php echo $row ['ID'];?>&document_number=<?php echo $row ["document_number"];?>&date=<?php echo $row ["date"];?>">
+          <td><a href="print_Receipt.php?id=<?php echo $row ['ID'];?>&document_number=<?php echo $row ["document_number"];?>&date=<?php echo $row ["date"];?>&UserName=<?php echo($_GET["UserName"]); ?>">
           <button type="button" class="btn btn-info">พิมพ์</button></a></td> 
     </tr>
     </tr>

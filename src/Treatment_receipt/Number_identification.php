@@ -52,6 +52,17 @@ date_default_timezone_set("Asia/Bangkok");
         $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
         $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
     }
+    $year = (@date('Y')+543);
+    $sqlAuto = "SELECT Max(document_number)+1 as MaxID FROM receipt  ";
+    $queryAuto = mysqli_query($conn,$sqlAuto);
+    $data = mysqli_fetch_assoc($queryAuto);
+    $New_id = $data['MaxID'];
+    if($New_id==""){
+        $auto_number = $year."0001";
+    }else{
+        $auto_number = sprintf("%04d",$New_id);
+    }
+
     ?>
 </head>
 <body class="bg-container">
@@ -89,7 +100,7 @@ date_default_timezone_set("Asia/Bangkok");
               <label for="brandcar" style="margin-left: 5%">เบอร์โทรผู้ดูแล :</label>
           </td>
              <td>
-                 <input type="text" name="document_number" style="margin-top: -5%" readonly><br>
+                 <input type="text" name="document_number" style="margin-top: -5%" onkeyup=*if(this.value*1!=this.value) this.value="";* value="<?php echo $auto_number ?>" readonly><br>
                  <input type="text" name="name_caretaker" required><br>
                  <input type="tel" name="tel_caretaker" required>
              </td>
