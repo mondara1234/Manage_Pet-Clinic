@@ -28,8 +28,6 @@
 
     include('../Database/connect.php');
 
-    $sql = "SELECT * FROM store_drug WHERE name LIKE '%".$Search."%' OR name_Owner LIKE '%".$Search."%'";
-    $query = mysqli_query($conn, $sql);
 
     $UserName = $_GET["UserName"];
     $sqlmanage = "SELECT * FROM admin WHERE user = '$UserName' ";
@@ -46,12 +44,15 @@
         $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ'";
         $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
         $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
+        $sql = "SELECT * FROM store_drug WHERE name LIKE '%".$Search."%' OR name_Owner LIKE '%".$Search."%'";
     }else{
         $sqlAllPostponement = "SELECT COUNT(*) as totalAllPostponement FROM postponement WHERE status = 'รออนุมัติ' AND Responsible = '$name'";
         $queryAllPostponement = mysqli_query($conn, $sqlAllPostponement);
         $resultAllPostponement = mysqli_fetch_array($queryAllPostponement, MYSQLI_ASSOC);
+        $sql = "SELECT * FROM store_drug WHERE name LIKE '%".$Search."%' AND name_Owner = '$name' ";
     }
 
+    $query = mysqli_query($conn, $sql);
     ?>
     <!-- ============================================================== -->
     <!-- ส่วนหัว - ใช้ style จาก pages.scss -->

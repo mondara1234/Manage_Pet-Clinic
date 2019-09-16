@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bdd1bc3-2df5-45eb-a379-6a7795650da3" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Treatment_receipt/Number_identification.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Treatment_receipt/Number_identification.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Treatment_receipt/Receipt.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Treatment_receipt/Receipt.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Magdcine_store/ManageDrug.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Magdcine_store/ManageDrug.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,10 +13,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Receipt.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Receipt.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Treatment_receipt/Receipt.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
+            <state relative-caret-position="231">
               <caret line="260" column="7" lean-forward="true" selection-start-line="260" selection-start-column="7" selection-end-line="260" selection-end-column="7" />
               <folding>
                 <element signature="n#style#0;n#input#0;n#td#0;n#tr#1;n#table#0;n#td#0;n#tr#2;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -35,11 +33,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ManageDrug.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ManageDrug.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Magdcine_store/ManageDrug.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1469">
-              <caret line="59" column="47" lean-forward="true" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
+            <state relative-caret-position="571">
+              <caret line="51" column="97" selection-start-line="51" selection-start-column="97" selection-end-line="51" selection-end-column="97" />
             </state>
           </provider>
         </entry>
@@ -117,7 +115,6 @@
         <option value="$PROJECT_DIR$/src/Treatment_receipt/api/Insert_Receipt.php" />
         <option value="$PROJECT_DIR$/src/Magdcine_store/api/InsertDrug.php" />
         <option value="$PROJECT_DIR$/src/Magdcine_store/api/delete.php" />
-        <option value="$PROJECT_DIR$/src/Magdcine_store/ManageDrug.php" />
         <option value="$PROJECT_DIR$/src/Magdcine_store/api/insert.php" />
         <option value="$PROJECT_DIR$/src/Magdcine_store/api/edit.php" />
         <option value="$PROJECT_DIR$/src/Magdcine_store/api/updated.php" />
@@ -131,6 +128,7 @@
         <option value="$PROJECT_DIR$/src/Treatment_receipt/Insert_Receipt.php" />
         <option value="$PROJECT_DIR$/src/Treatment_receipt/Receipt.php" />
         <option value="$PROJECT_DIR$/src/Treatment_receipt/Number_identification.php" />
+        <option value="$PROJECT_DIR$/src/Magdcine_store/ManageDrug.php" />
       </list>
     </option>
   </component>
@@ -256,12 +254,12 @@
       <workItem from="1568481301656" duration="14906000" />
       <workItem from="1568514107066" duration="129000" />
       <workItem from="1568574499629" duration="5727000" />
-      <workItem from="1568661100464" duration="5264000" />
+      <workItem from="1568661100464" duration="5680000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86772000" />
+    <option name="totallyTimeSpent" value="87188000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -639,13 +637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Magdcine_store/ManageDrug.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1469">
-          <caret line="59" column="47" lean-forward="true" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Treatment_receipt/Number_identification.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
@@ -655,7 +646,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Treatment_receipt/Receipt.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
+        <state relative-caret-position="231">
           <caret line="260" column="7" lean-forward="true" selection-start-line="260" selection-start-column="7" selection-end-line="260" selection-end-column="7" />
           <folding>
             <element signature="n#style#0;n#input#0;n#td#0;n#tr#1;n#table#0;n#td#0;n#tr#2;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -668,6 +659,13 @@
             <element signature="n#style#0;n#input#0;n#td#4;n#tr#4;n#table#0;n#td#0;n#tr#2;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#td#4;n#tr#5;n#table#0;n#td#0;n#tr#2;n#table#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Magdcine_store/ManageDrug.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="571">
+          <caret line="51" column="97" selection-start-line="51" selection-start-column="97" selection-end-line="51" selection-end-column="97" />
         </state>
       </provider>
     </entry>
