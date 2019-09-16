@@ -108,40 +108,41 @@ date_default_timezone_set("Asia/Bangkok");
             let number = document.getElementById("number_"+i).value;
             let price = document.getElementById("price_"+i).value;
             let total = document.getElementById("total_"+i).value;
-            $.ajax({
-                type: "POST",
-                url: "Insert_Receipt.php",
-                data:  {
-                    document_number: document_number,
-                    name_customer: name_customer,
-                    name_animals: name_animals,
-                    tel_customer: tel_customer,
-                    name_caretaker: name_caretaker,
-                    tel_caretaker: tel_caretaker,
-                    dateformat: dateformat,
-                    count: count,
-                    txtList: txtList,
-                    number: number,
-                    price: price,
-                    total: total,
-                    txtCause: txtCause,
-                    discount: discount,
-                    Balance: Balance,
-                    TotalAll: TotalAll
-                },
-                success: function(result) {
-                    console.log('Debug Objects: "'+result );
-                    if(result === 'ss'){
-                        if(confirm('บันทึกสำเร็จ')==true) {
-                           window.location.href = "showdata_Receipt.php";
+
+                $.ajax({
+                    type: "POST",
+                    url: "Insert_Receipt.php",
+                    format: 'json',
+                    data: {
+                        document_number: document_number,
+                        name_customer: name_customer,
+                        name_animals: name_animals,
+                        tel_customer: tel_customer,
+                        name_caretaker: name_caretaker,
+                        tel_caretaker: tel_caretaker,
+                        dateformat: dateformat,
+                        count: count,
+                        txtList: txtList,
+                        number: number,
+                        price: price,
+                        total: total,
+                        txtCause: txtCause,
+                        discount: discount,
+                        Balance: Balance,
+                        TotalAll: TotalAll
+                    },
+                    success: function (response) {
+                        if(response === 'บันทึกสำเร็จ'){
+                            if (confirm('บันทึกสำเร็จ ต้องการตรวจสอบประวัติการออกใบเสร็จ หรือ พิมพ์ใบเสร็จ หรือไม่?') == true) {
+                                window.location.href = "showdata_Receipt.php?UserName=<?php echo($_GET["UserName"]); ?>";
+                            } else {
+                                window.location.href = "Number_identification.php?UserName=<?php echo($_GET["UserName"]); ?>";
+                            }
                         }else{
                             return false;
                         }
-                    }else{
-                        console.log(result);
                     }
-                }
-            });
+                });
 
         }
     }
@@ -208,14 +209,14 @@ date_default_timezone_set("Asia/Bangkok");
                     {
                         ?>
          <tr>
-           <td ><input type="number" name="count_<?php echo $i ?>" id="count_<?php echo $i ?>" style="width: 100%" value="<?php echo $i ?>" readonly/></td>
-           <td><input type="text" name="txtList_<?php echo $i ?>" id="txtList_<?php echo $i ?>" style="width: 100%"
-                onkeyup="calculate(<?php echo $i ?>)" /></td>
-           <td><input type="number" name="number_<?php echo $i ?>" id="number_<?php echo $i ?>" style="width: 100%"
-                onkeyup="calculate(<?php echo $i ?>)" /></td>
-           <td><input type="number" name="price_<?php echo $i ?>" id="price_<?php echo $i ?>" style="width: 100%"
-                onkeyup="calculate(<?php echo $i ?>)" /></td>
-           <td><input type="number" name="total_<?php echo $i ?>" id="total_<?php echo $i ?>" style="width: 100%" disabled /></td>
+           <td><input type="number" name="count_<?php echo $i ?>" id="count_<?php echo $i ?>" style="width: 100%; text-align: center;" value="<?php echo $i ?>"  disabled/></td>
+           <td><input type="text" name="txtList_<?php echo $i ?>" id="txtList_<?php echo $i ?>" style="width: 100%; text-align: center;%"
+                onkeyup="calculate(<?php echo $i ?>)" required /></td>
+           <td><input type="number" name="number_<?php echo $i ?>" id="number_<?php echo $i ?>" style="width: 100%; text-align: center;"
+                onkeyup="calculate(<?php echo $i ?>)" required /></td>
+           <td><input type="number" name="price_<?php echo $i ?>" id="price_<?php echo $i ?>" style="width: 100%; text-align: center;"
+                onkeyup="calculate(<?php echo $i ?>)" required /></td>
+           <td><input type="number" name="total_<?php echo $i ?>" id="total_<?php echo $i ?>" style="width: 100%; text-align: center;" disabled /></td>
          </tr>
             <?php
               }
@@ -260,7 +261,6 @@ date_default_timezone_set("Asia/Bangkok");
     </div>
     <?php require_once '../Component/footer.php';?>
 </div>
-<br><br><br><br>
 <!-- ============================================================== -->
 <!-- Jquery ทั้งหมด  -->
 <!-- ============================================================== -->

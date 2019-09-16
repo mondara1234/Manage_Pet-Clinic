@@ -108,7 +108,7 @@ date_default_timezone_set("Asia/Bangkok");
        </table>
         <br><center>
         <label for="date" class="font-18" style="margin-top: 3%"> กรุณากรอกจำนวนช่องรายการที่ต้องการก่อน </label> <br><br>
-       <input type="text" class="font-16" name="numberlist" style="width: 300px; height: 40px"><br><br>
+       <input type="number" class="font-16" name="numberlist" style="width: 300px; height: 40px" required><br><br>
           <input type="submit" name="submit" class="font-18" style=" height: 50px; margin-bottom: 30%" value="สร้างใบเสร็จการรักษา">
           </center>
        </td>
@@ -116,13 +116,9 @@ date_default_timezone_set("Asia/Bangkok");
 </table>
 </form>
 
-</div>
     </div>
     <?php require_once '../Component/footer.php';?>
 </div>
-
-
-<br><br><br><br>
 
 <!-- ============================================================== -->
 <!-- Jquery ทั้งหมด  -->
